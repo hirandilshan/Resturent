@@ -72,4 +72,42 @@
     color: rgb(245, 101, 34);
     text-decoration: underline;
     text-underline-offset: 10px;
+    text-decoration-color: rgba(228, 176, 5, 0.767);
+}
+
+.red_btn{
+    cursor: pointer;
+    margin-top: 20px;
+    width: 160px;
+    font-weight: bold;
+    color: aliceblue;
+    line-height: 50px;
+    background-color: rgb(245, 101, 34);
+    border-radius: 5px;
+    border:1px solid rgb(245, 101, 34);
+    box-shadow: rgb(245, 120, 69);
+    transition: all 0.2s;
+
+}
+
+.red_btn:hover{
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(240, 120, 69);
+    border: 1px solid rgb(245, 101, 34);
+    color: rgb(245, 101, 34);
+}
+
+.food-items{
+    margin: 70px 0;
+    padding: 20px 0;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+     
+}
+
+.item{
+    width: 250px;
 }
