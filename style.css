@@ -110,4 +110,26 @@
 
 .item{
     width: 250px;
+    padding: 30px;
+    text-align: center;
+}
+
+.item div{
+    height: 160px;
+}
+
+.item img{
+    width :160px;
+    margin-bottom: 15px;
+}
+
+.item p{
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.item .white_btn{
+    width: 120px;
+    line-height: 35px;
 }
