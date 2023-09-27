@@ -10,7 +10,7 @@
 
 .logo img{
     width: 150px;
-    height: 50px;
+    height: 150px;
 }
 
 
@@ -19,11 +19,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 160px;
     padding: 0 7vw;
-    background-color: rgb(235, 196, 196);
-    border-bottom: 2px solid rgb(15, 12, 12);
-    box-shadow: 0 2px 20px rgb(245, 101, 101);
+    background-color: rgb(123, 195, 243);
+    border-bottom: 2px solid rgb(0, 2, 3);
+    box-shadow: 0px 10px 200px rgb(245, 71, 71);
 }
 
 .header ul{
@@ -31,17 +31,17 @@
     align-items: center;
 }
 .header ul li:hover{
-    color: brown;
+    color: rgb(5, 23, 82);
 }
 
 .nev ul li{
     padding:  15px;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .home{
-    background-color: rgb(241, 175, 186);
+    background-color: rgb(219, 227, 253);
     padding: 0 7vw;
 }
 
@@ -240,3 +240,28 @@
     cursor: pointer;
 }
 
+.main_slide3 .fav-food .item div{
+    height: 160px;
+    margin-bottom: 15px;
+}
+
+.main_slide3 .fav-food .item img{
+    width: 160px;
+    margin-bottom: 15px;
+}
+
+.main_slide3 .fav-price{
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.main_slide3 .dsgn{
+    background-color: rgb(255,214 , 176);
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    border-radius: 10px;
+} 
