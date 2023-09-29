@@ -8,6 +8,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.headerbar, .bar{
+    display: none;
+}
+
+
 .logo img{
     width: 150px;
     height: 150px;
@@ -37,7 +42,7 @@
     text-shadow: 0 2px 15px rgb(2, 2, 2);
 }
 
-.nev ul li{
+.nav ul li{
     padding:  15px;
     font-size: 20px;
     font-weight: bold;
@@ -482,16 +487,69 @@
 
 
 @media only screen and (max-width: 1284px){
-    .header .nev,.header .search-input,.header .icon,.header .headerbar{
+    .header .nav,.header .search-input,.header .icon,.header .headerbar{
         display: none;
     }
-    .header .bar{
+
+
+    .search{
+        width: 60vw;
+    }
+
+    .bar{
         display: block;
         cursor: pointer;
     }
-    .headerbar{
+    .header .headerbar{
         overflow: hidden;
         display: flex ;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        right: -100%;
+        bottom: 0;
+        background-color:rgb(219, 227, 253);
+
+    }
+
+    .header .headerbar .account,.header .headerbar .nav{
+        display:block;
+        font-size: 18px;
+    }
+
+    .bar {
+        display: block;
+        top: 10px;
+        right: 0;
+        position: absolute;
+        font-size: 25px;
+
+    }
+
+
+    .headerbar .nav ul{
+        flex-direction: column;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .headerbar .nav li{
+        width: 96vw;
+        margin: 10px 0;
+        padding: 15px 30px;
+        box-shadow: 0 2px 15px rgb(123, 195, 243);
+    }
+
+    .headerbar .account{
+        line-height: 40px;
+        margin-top: 60px;
+        background-color: rgb(123, 195, 243);
+        padding: 15px;
+    }
+
+    .headerbar .account ul{
+        justify-content: space-between;
     }
 
 }
