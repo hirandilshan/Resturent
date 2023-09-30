@@ -491,7 +491,10 @@
         display: none;
     }
 
-
+    .search{
+        display: none;
+        cursor: pointer;
+    }
     .search{
         width: 60vw;
     }
