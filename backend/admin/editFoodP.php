@@ -12,6 +12,4 @@ $sql = "UPDATE foods SET img='$img', price=$price WHERE foodId='$foodId';";
 
 $result = mysqli_query($connect, $sql);
 echo "<script>alert('Upadte successful!'); window.location.href = '../../frontend/admin/manageFood.php';</script>";
-
-
 ?>

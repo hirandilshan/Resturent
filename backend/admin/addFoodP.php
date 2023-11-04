@@ -14,6 +14,4 @@ $sql = "INSERT INTO foods VALUES ('$foodId','$foodType','$item','$img',$price);"
 
 $result = mysqli_query($connect, $sql);
 echo "<script>alert('Added successfuly!'); window.location.href = '../../frontend/admin/manageFood.php';</script>";
-
-
 ?>
