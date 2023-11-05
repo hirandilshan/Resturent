@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header >
+<header >
         
         <div class="header">
             <div class="headerbar">
@@ -35,22 +35,22 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="a">
+                        <a href="../../frontend/user/FoodMenu.php">
                             <li>Food Menu</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/ServiceTypes.php">
                             <li>Service Types</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/Galary.php">
                             <li>Galary</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/Facilities.php">
                             <li>Facilities</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/Offers.php">
                             <li>Offers</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/About.php">
                             <li>About</li> 
                         </a>
                     </ul>
@@ -58,28 +58,28 @@
             </div>
             
             <div class="logo">
-                <a href="../../Home.html"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+                <a href="../../frontend/user/Home.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                    <a href="a">
-                        <li>Food Menu</li> 
-                    </a>
-                    <a href="a">
-                        <li>Service Types</li> 
-                    </a>
-                    <a href="a">
-                        <li>Galary</li> 
-                    </a>
-                    <a href="a">
-                        <li>Facilities</li> 
-                    </a>
-                    <a href="a">
-                        <li>Offers</li> 
-                    </a>
-                    <a href="a">
-                        <li>About</li> 
-                    </a>
+                        <a href="../../frontend/user/FoodMenu.php">
+                            <li>Food Menu</li> 
+                        </a>
+                        <a href="../../frontend/user/ServiceTypes.php">
+                            <li>Service Types</li> 
+                        </a>
+                        <a href="../../frontend/user/Galary.php">
+                            <li>Galary</li> 
+                        </a>
+                        <a href="../../frontend/user/Facilities.php">
+                            <li>Facilities</li> 
+                        </a>
+                        <a href="../../frontend/user/Offers.php">
+                            <li>Offers</li> 
+                        </a>
+                        <a href="../../frontend/user/About.php">
+                            <li>About</li> 
+                        </a>
                 </ul>
             </div>
             <div class="bar">

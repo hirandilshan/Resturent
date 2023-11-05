@@ -11,17 +11,26 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header >
+    <header>
         
         <div class="header">
             <div class="headerbar">
                 <div class="account"> 
                     <ul>
-                        <a href="">
-                            <li>
-                                <i class="material-icons" id="profile-icon">&#xe853;</i>
-                            </li>
-                        </a>
+
+                        <?php
+                        if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                        } else {
+                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                            echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                        }
+                        ?>
+                        <li><a href="../../frontend/user/menu.php">Order Now</a></li>
+                        <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                            </a></li>
+
+                        
                         <a href="#">
                             <li>
                                 <i class="material-icons" id="search-icon1">&#xe8b6;</i>
@@ -36,22 +45,22 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="a">
+                        <a href="../../frontend/user/FoodMenu.php">
                             <li>Food Menu</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/ServiceTypes.php">
                             <li>Service Types</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/Galary.php">
                             <li>Galary</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/Facilities.php">
                             <li>Facilities</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/Offers.php">
                             <li>Offers</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/About.php">
                             <li>About</li> 
                         </a>
                     </ul>
@@ -59,28 +68,28 @@
             </div>
             
             <div class="logo">
-                <a href="../../Home.html"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+                <a href="../../frontend/user/Home.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                    <a href="a">
-                        <li>Food Menu</li> 
-                    </a>
-                    <a href="a">
-                        <li>Service Types</li> 
-                    </a>
-                    <a href="a">
-                        <li>Galary</li> 
-                    </a>
-                    <a href="a">
-                        <li>Facilities</li> 
-                    </a>
-                    <a href="a">
-                        <li>Offers</li> 
-                    </a>
-                    <a href="a">
-                        <li>About</li> 
-                    </a>
+                        <a href="../../frontend/user/FoodMenu.php">
+                            <li>Food Menu</li> 
+                        </a>
+                        <a href="../../frontend/user/ServiceTypes.php">
+                            <li>Service Types</li> 
+                        </a>
+                        <a href="../../frontend/user/Galary.php">
+                            <li>Galary</li> 
+                        </a>
+                        <a href="../../frontend/user/Facilities.php">
+                            <li>Facilities</li> 
+                        </a>
+                        <a href="../../frontend/user/Offers.php">
+                            <li>Offers</li> 
+                        </a>
+                        <a href="../../frontend/user/About.php">
+                            <li>About</li> 
+                        </a>
                 </ul>
             </div>
             <div class="bar">
@@ -104,23 +113,35 @@
                 <button class="search_btn">Search</button>
             </div>
             <div class="icon">
-                <a href=""><i class="material-icons">&#xe853;</i></a>
-                <a href=""><i class="material-icons">&#xe8cc;</i></a>
+                <ul>
+
+                    <?php
+                    if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                    } else {
+                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                    }
+                    ?>
+                    <li><a href="../../frontend/user/menu.php">Order Now</a></li>
+                    <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                        </a></li>
+
+                </ul> 
             </div>
         </div>
     </header>
-
     <div class="content">
         <div class="intro">
             <div class="intro-image">
-                <img src="img/background.jpeg" alt="facility">
+                <img src="../../img/background.jpeg" alt="facility">
                 <h1>Our Facilities</h1>
             </div>
         </div>
     
         <div class="facilities">
             <div class="facility">
-                <img src="img/wifi.jpeg" alt="WiFi Icon">
+                <img src="../../img/wifi.jpeg" alt="WiFi Icon">
                 <div>
                     <h3>Free WiFi</h3>
                     <p>Stay connected with our high-speed WiFi while you dine.Whether it's for business or leisure, our WiFi service ensures you're always connected.</p>
@@ -128,7 +149,7 @@
                 </div>
             </div>
             <div class="facility">
-                <img src="img/parking.jpeg" alt="Parking Icon">
+                <img src="../../img/parking.jpeg" alt="Parking Icon">
                 <div>
                     <h3>Ample Parking</h3>
                     <p>Convenient and spacious parking for our valued guests.Never worry about finding a parking spot - we have ample space to accommodate all our patrons.</p>
@@ -136,7 +157,7 @@
                 </div>
             </div>
             <div class="facility">
-                <img src="img/outdoor.jpeg" alt="Outdoor Seating Icon">
+                <img src="../../img/outdoor.jpeg" alt="Outdoor Seating Icon">
                 <div>
                     <h3>Outdoor Seating</h3>
                     <p>Enjoy the open air and great weather in our outdoor seating area.Perfect for a relaxed meal with friends and family while enjoying the outdoors.</p>
@@ -144,7 +165,7 @@
                 </div>
             </div>
             <div class="facility">
-                <img src="img/private.jpeg" alt="Private Dining Icon">
+                <img src="../../img/private.jpeg" alt="Private Dining Icon">
                 <div>
                     <h3>Private Dining</h3>
                     <p>Book our private dining area for special events and gatherings. Ideal for special occasions, gatherings, and private events with personalized service.</p>
@@ -152,7 +173,7 @@
                 </div>
             </div>
             <div class="facility">
-                <img src="img/bar.jpeg" alt="Bar Icon">
+                <img src="../../img/bar.jpeg" alt="Bar Icon">
                 <div>
                     <h3> Bar</h3>
                     <p>Enjoy a variety of drinks and cocktails at our full-service bar.Our skilled bartenders craft the perfect drinks to complement your dining experience.</p>

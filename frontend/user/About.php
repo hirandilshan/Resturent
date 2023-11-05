@@ -11,17 +11,26 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header >
+    <header>
         
         <div class="header">
             <div class="headerbar">
                 <div class="account"> 
                     <ul>
-                        <a href="">
-                            <li>
-                                <i class="material-icons" id="profile-icon">&#xe853;</i>
-                            </li>
-                        </a>
+
+                        <?php
+                        if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                        } else {
+                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                            echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                        }
+                        ?>
+                        <li><a href="../../frontend/user/menu.php">Order Now</a></li>
+                        <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                            </a></li>
+
+                        
                         <a href="#">
                             <li>
                                 <i class="material-icons" id="search-icon1">&#xe8b6;</i>
@@ -36,22 +45,22 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="a">
+                        <a href="../../frontend/user/FoodMenu.php">
                             <li>Food Menu</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/ServiceTypes.php">
                             <li>Service Types</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/Galary.php">
                             <li>Galary</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/Facilities.php">
                             <li>Facilities</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/Offers.php">
                             <li>Offers</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/About.php">
                             <li>About</li> 
                         </a>
                     </ul>
@@ -59,28 +68,28 @@
             </div>
             
             <div class="logo">
-                <a href="../../Home.html"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+                <a href="../../frontend/user/Home.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                    <a href="a">
-                        <li>Food Menu</li> 
-                    </a>
-                    <a href="a">
-                        <li>Service Types</li> 
-                    </a>
-                    <a href="a">
-                        <li>Galary</li> 
-                    </a>
-                    <a href="a">
-                        <li>Facilities</li> 
-                    </a>
-                    <a href="a">
-                        <li>Offers</li> 
-                    </a>
-                    <a href="a">
-                        <li>About</li> 
-                    </a>
+                        <a href="../../frontend/user/FoodMenu.php">
+                            <li>Food Menu</li> 
+                        </a>
+                        <a href="../../frontend/user/ServiceTypes.php">
+                            <li>Service Types</li> 
+                        </a>
+                        <a href="../../frontend/user/Galary.php">
+                            <li>Galary</li> 
+                        </a>
+                        <a href="../../frontend/user/Facilities.php">
+                            <li>Facilities</li> 
+                        </a>
+                        <a href="../../frontend/user/Offers.php">
+                            <li>Offers</li> 
+                        </a>
+                        <a href="../../frontend/user/About.php">
+                            <li>About</li> 
+                        </a>
                 </ul>
             </div>
             <div class="bar">
@@ -104,15 +113,28 @@
                 <button class="search_btn">Search</button>
             </div>
             <div class="icon">
-                <a href=""><i class="material-icons">&#xe853;</i></a>
-                <a href=""><i class="material-icons">&#xe8cc;</i></a>
+                <ul>
+
+                    <?php
+                    if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                    } else {
+                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                    }
+                    ?>
+                    <li><a href="../../frontend/user/menu.php">Order Now</a></li>
+                    <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                        </a></li>
+
+                </ul> 
             </div>
         </div>
     </header>
     <div class="about">
         <div class="intro">
             <div class="intro-image">
-                <img src="img/background.jpeg" alt="aboutUs">
+                <img src="../../img/background.jpeg" alt="aboutUs">
                 <h1>About Us</h1>
             </div>
             <div class="intro-text">
@@ -138,7 +160,7 @@
             </div>
             <div class="content2">
                 <div class="first">
-                    <img src="img/hitry.jpg" alt="Resturent">
+                    <img src="../../img/hitry.jpg" alt="Resturent">
                     <div>
                         <h2>Our Mission</h2>
                         <p>"Our mission at Signature cuisine is to redefine Sri Lankan gastronomy by blending traditional flavors with modern innovation. We strive to offer a remarkable dining experience, showcasing the rich cultural heritage of Sri Lanka through our diverse and authentic culinary creations. With a focus on quality, sustainability, and community engagement, we aim to delight every palate while contributing to the enrichment of our local food industry and fostering a sense of culinary pride in our nation."</p>
@@ -153,7 +175,7 @@
                         <p>"At Signature cuisine, our vision is to become the epitome of Sri Lankan culinary excellence on a global stage. We aspire to be the preferred choice for those seeking an authentic taste of Sri Lanka, known for our unwavering commitment to quality, innovation, and sustainability. Through continuous growth and expansion, we envision creating a network of restaurants that serve as ambassadors of Sri Lankan culture and cuisine, delighting patrons with every bite and leaving an indelible mark on the world's gastronomic map. Our aim is to celebrate the diverse flavors of Sri Lanka while fostering a deep sense of pride and connection to our roots, both locally and internationally."</p>
                     
                     </div>
-                    <img src="img/vision.jpg" alt="Resturent">
+                    <img src="../../img/vision.jpg" alt="Resturent">
                 </div>
             </div>
             

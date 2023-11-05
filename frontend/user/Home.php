@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/Home.css">
     <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +11,26 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header >
+    <header>
         
         <div class="header">
             <div class="headerbar">
                 <div class="account"> 
                     <ul>
-                        <a href="">
-                            <li>
-                                <i class="material-icons" id="profile-icon">&#xe853;</i>
-                            </li>
-                        </a>
+
+                        <?php
+                        if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                        } else {
+                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                            echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                        }
+                        ?>
+                        <li><a href="../../frontend/user/menu.php">Order Now</a></li>
+                        <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                            </a></li>
+
+                        
                         <a href="#">
                             <li>
                                 <i class="material-icons" id="search-icon1">&#xe8b6;</i>
@@ -35,22 +45,22 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="a">
+                        <a href="../../frontend/user/FoodMenu.php">
                             <li>Food Menu</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/ServiceTypes.php">
                             <li>Service Types</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/Galary.php">
                             <li>Galary</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/Facilities.php">
                             <li>Facilities</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/Offers.php">
                             <li>Offers</li> 
                         </a>
-                        <a href="a">
+                        <a href="../../frontend/user/About.php">
                             <li>About</li> 
                         </a>
                     </ul>
@@ -58,28 +68,28 @@
             </div>
             
             <div class="logo">
-                <a href="../../Home.html"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+                <a href="../../frontend/user/Home.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                    <a href="a">
-                        <li>Food Menu</li> 
-                    </a>
-                    <a href="a">
-                        <li>Service Types</li> 
-                    </a>
-                    <a href="a">
-                        <li>Galary</li> 
-                    </a>
-                    <a href="a">
-                        <li>Facilities</li> 
-                    </a>
-                    <a href="a">
-                        <li>Offers</li> 
-                    </a>
-                    <a href="a">
-                        <li>About</li> 
-                    </a>
+                        <a href="../../frontend/user/FoodMenu.php">
+                            <li>Food Menu</li> 
+                        </a>
+                        <a href="../../frontend/user/ServiceTypes.php">
+                            <li>Service Types</li> 
+                        </a>
+                        <a href="../../frontend/user/Galary.php">
+                            <li>Galary</li> 
+                        </a>
+                        <a href="../../frontend/user/Facilities.php">
+                            <li>Facilities</li> 
+                        </a>
+                        <a href="../../frontend/user/Offers.php">
+                            <li>Offers</li> 
+                        </a>
+                        <a href="../../frontend/user/About.php">
+                            <li>About</li> 
+                        </a>
                 </ul>
             </div>
             <div class="bar">
@@ -103,8 +113,21 @@
                 <button class="search_btn">Search</button>
             </div>
             <div class="icon">
-                <a href=""><i class="material-icons">&#xe853;</i></a>
-                <a href=""><i class="material-icons">&#xe8cc;</i></a>
+                <ul>
+
+                    <?php
+                    if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                    } else {
+                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                    }
+                    ?>
+                    <li><a href="../../frontend/user/menu.php">Order Now</a></li>
+                    <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                        </a></li>
+
+                </ul> 
             </div>
         </div>
     </header>
