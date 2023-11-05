@@ -16,7 +16,7 @@ if(isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
    
     
     if ($connect->query($insert_sql) === TRUE) {
-        echo "<script>alert('added to the cart!'); window.location.href = '../../frontend/user/menu.php';</script>";
+        echo "<script>alert('added to the cart!'); window.location.href = '../../frontend/user/foodMenu.php';</script>";
     } else {
         echo "<script>alert('not added to cart!'); window.location.href = '../../frontend/user/index.php';</script>";
         echo "Error: " . $insert_sql . "<br>" . $connect->error;

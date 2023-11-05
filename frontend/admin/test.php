@@ -29,10 +29,6 @@ session_start();
                             echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
                         }
                         ?>
-                        <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                        <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                            </a></li>
-
                         
                         <a href="#">
                             <li>
@@ -50,58 +46,24 @@ session_start();
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li> 
-                        </a>
-                        <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li> 
-                        </a>
-                        <a href="../../frontend/user/galary.php">
-                            <li>Galary</li> 
-                        </a>
-                        <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li> 
-                        </a>
-                        <a href="../../frontend/user/offers.php">
-                            <li>Offers</li> 
-                        </a>
-                        <a href="../../frontend/user/about.php">
-                            <li>About</li> 
-                        </a>
-                        <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li> 
-                        </a>
+                        <a href="../../frontend/admin/adminHome.php"><li>Home</li> </a>
+                        <a href="../../frontend/admin/manageReservation.php"><li>Manage Reservation</li> </a> 
+                        <a href="../../frontend/admin/manageFood.php"><li>Manage Food Items</li> </a>
+                        <a href="../../frontend/admin/manageReview.php"><li>Customer Reviews</li> </a>
                     </ul>
                 </div>
             </div>
             
             <div class="logo">
-                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+                <a href="../../frontend/admin/adminHome.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                        <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li> 
-                        </a>
-                        <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li> 
-                        </a>
-                        <a href="../../frontend/user/galary.php">
-                            <li>Galary</li> 
-                        </a>
-                        <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li> 
-                        </a>
-                        <a href="../../frontend/user/offers.php">
-                            <li>Offers</li> 
-                        </a>
-                        <a href="../../frontend/user/about.php">
-                            <li>About</li> 
-                        </a>
-                        <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li> 
-                        </a>
-                </ul>
+                        <a href="../../frontend/admin/adminHome.php"><li>Home</li> </a>
+                        <a href="../../frontend/admin/manageReservation.php"><li>Manage Reservation</li> </a> 
+                        <a href="../../frontend/admin/manageFood.php"><li>Manage Food Items</li> </a>
+                        <a href="../../frontend/admin/manageReview.php"><li>Customer Reviews</li> </a>
+                    </ul>
             </div>
             <div class="bar">
                 <ul>
@@ -117,14 +79,6 @@ session_start();
                     </a>
                 </ul>
             </div>
-            <div class="search-input">
-                <div>
-                    <a href="../../frontend/user/searchpage.php">
-                        <input type="search" id="search-box" name="Search-box">
-                    </a>
-                </div>
-                <button class="search_btn">Search</button>
-            </div>
             <div class="icon">
                 <ul>
 
@@ -136,9 +90,7 @@ session_start();
                         echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
                     }
                     ?>
-                    <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                    <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                        </a></li>
+                    
 
                 </ul> 
             </div>

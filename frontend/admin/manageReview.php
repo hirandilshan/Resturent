@@ -2,70 +2,100 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAT OUT Restaurant</title>
+    <meta name="viewport" content="width=device-width,initial-scal=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
         
-        <title>Signature cuisine</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="../../css/main.css">
-        <link rel="stylesheet" type="text/css" href="../../css/headerFooter.css">
-        <link rel="stylesheet" type="text/css" href="../../css/adminHome.css">
-
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="top-bar clearfix">
-                <div class="top-bar-text">
-                
-                
-                <h3>
-                    Welocome to Administrative Area...
-                </h3>
-                </div><!--top-bar-text-->
-                
-                <div class="search-bar">
-                    <form method="get" action="../../frontend/user/index.php">
-                        <a href="../../frontend/user/searchpage.php">
-                            <input type="search" id="search-box" name="Search-box">
-                            <button type = "Submit"></button>
-                        </a>
-                    </form>
-
-                </div><!--search-bar-->
-        
-            </div><!--top-bar-->
-            <header>
-                <div class="logo">
-                    <h1>Signature cuisine</h1>
-                    <p>Resturent chain</p>
-                    
-                </div><!--logo-->
-                
-                <div class="socialM">
+        <div class="header">
+            <div class="headerbar">
+                <div class="account"> 
                     <ul>
-                        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook fa-fw"></i>
-                        </a></li>
-                        <li><a href="https://www.instagram.com/"><i class="fab fa-instagram fa-fw"></i>
-                        </a></li>
-                        <li><a href="https://twitter.com/"><i class="fab fa-twitter fa-fw"></i>
-                        </a></li>
+
+                        <?php
+                        if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                        } else {
+                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                            echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                        }
+                        ?>
                         
+                        <a href="#">
+                            <li>
+                                <i class="material-icons" id="search-icon1">&#xe8b6;</i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <a href="../../frontend/user/searchpage.php">
+                            <input type="search" id="search-box" name="Search-box">
+                            </a>
+                            <i class="material-icons">&#xe8b6;</i>
+                        </div>
                     </ul>
-
-                </div><!--Social media-->
-
-            </header>
-            <nav>
+                    
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="../../frontend/admin/adminHome.php"><li>Home</li> </a>
+                        <a href="../../frontend/admin/manageReservation.php"><li>Manage Reservation</li> </a> 
+                        <a href="../../frontend/admin/manageFood.php"><li>Manage Food Items</li> </a>
+                        <a href="../../frontend/admin/manageReview.php"><li>Customer Reviews</li> </a>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="logo">
+                <a href="../../frontend/admin/adminHome.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+            </div>
+            <div class="nav">
                 <ul>
-                    <li><a href="../../frontend/admin/adminHome.php">Home</a></li>
-                    <li><a href="../../frontend/admin/manageReservation.php">Manage Reservation</a></li>
-                    <li><a href="../../frontend/admin/manageFood.php">Manage Food Items</a></li>
-                    <li><a href="../../frontend/admin/manageReview.php">Customer Reviews</a></li>
-                    
-                    
+                        <a href="../../frontend/admin/adminHome.php"><li>Home</li> </a>
+                        <a href="../../frontend/admin/manageReservation.php"><li>Manage Reservation</li> </a> 
+                        <a href="../../frontend/admin/manageFood.php"><li>Manage Food Items</li> </a>
+                        <a href="../../frontend/admin/manageReview.php"><li>Customer Reviews</li> </a>
+                    </ul>
+            </div>
+            <div class="bar">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="material-icons" id="navbar-icon">&#xe5d2;</i>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <i class="material-icons" id="cancel">&#xe5c9;</i>
+                        </li>
+                    </a>
                 </ul>
-            </nav>
-        </div><!--wrapper-->
+            </div>
+            <div class="icon">
+                <ul>
+
+                    <?php
+                    if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                    } else {
+                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                    }
+                    ?>
+                    
+
+                </ul> 
+            </div>
+        </div>
+    </header>
         <?php
             include_once '../../backend/user/dbs.php';  // Include your database connection file
             $sql = "SELECT * FROM review;";
@@ -99,5 +129,24 @@ session_start();
         $connect->close();
 
         ?>
+            <div class="footer">
+        <div class="footer-1">
+            <div class="logo">
+                <img src="../../images/eatout logo.jpg" alt="">
+            </div>
+            <div>
+                <address>
+                    <p>Email:hirannishshanka@gmail.com</p>
+                    <p>GitHub: <a href="https://github.com/hirandilshan">hirandilshan</a></p>
+                    <p>Mr.Hiran Nishshanka,<br>Kegalle,<br>SriLanka.</p>
+                </address>
+            </div>
+        </div>
+        <div class="footer-2">
+            <img src="../../images/download.jpeg" alt="">
+            <h2>Powered by <em>HD Creations</em></h2>
+        </div>
+    </div>
+    <script src="../../frontend/user/app.js"></script>
     </body>
 </html>

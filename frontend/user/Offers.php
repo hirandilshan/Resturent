@@ -1,8 +1,11 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/Offers.css">
+    <link rel="stylesheet" href="../../css/index.css">
     <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +14,35 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<header >
+    <header>
         
         <div class="header">
             <div class="headerbar">
                 <div class="account"> 
                     <ul>
-                        <a href="">
-                            <li>
-                                <i class="material-icons" id="profile-icon">&#xe853;</i>
-                            </li>
-                        </a>
+
+                        <?php
+                        if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                        } else {
+                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                            echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                        }
+                        ?>
+                        <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
+                        <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                            </a></li>
+
+                        
                         <a href="#">
                             <li>
                                 <i class="material-icons" id="search-icon1">&#xe8b6;</i>
                             </li>
                         </a>
                         <div class="search" id="searchinput1">
-                            <input type="search">
+                            <a href="../../frontend/user/searchpage.php">
+                            <input type="search" id="search-box" name="Search-box">
+                            </a>
                             <i class="material-icons">&#xe8b6;</i>
                         </div>
                     </ul>
@@ -36,50 +50,56 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="../../frontend/user/FoodMenu.php">
+                        <a href="../../frontend/user/foodMenu.php">
                             <li>Food Menu</li> 
                         </a>
-                        <a href="../../frontend/user/ServiceTypes.php">
+                        <a href="../../frontend/user/serviceTypes.php">
                             <li>Service Types</li> 
                         </a>
-                        <a href="../../frontend/user/Galary.php">
+                        <a href="../../frontend/user/galary.php">
                             <li>Galary</li> 
                         </a>
-                        <a href="../../frontend/user/Facilities.php">
+                        <a href="../../frontend/user/facilities.php">
                             <li>Facilities</li> 
                         </a>
-                        <a href="../../frontend/user/Offers.php">
+                        <a href="../../frontend/user/offers.php">
                             <li>Offers</li> 
                         </a>
-                        <a href="../../frontend/user/About.php">
+                        <a href="../../frontend/user/about.php">
                             <li>About</li> 
+                        </a>
+                        <a href="../../frontend/user/reservation.php">
+                            <li>Reservation</li> 
                         </a>
                     </ul>
                 </div>
             </div>
             
             <div class="logo">
-                <a href="../../frontend/user/Home.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                        <a href="../../frontend/user/FoodMenu.php">
+                        <a href="../../frontend/user/foodMenu.php">
                             <li>Food Menu</li> 
                         </a>
-                        <a href="../../frontend/user/ServiceTypes.php">
+                        <a href="../../frontend/user/serviceTypes.php">
                             <li>Service Types</li> 
                         </a>
-                        <a href="../../frontend/user/Galary.php">
+                        <a href="../../frontend/user/galary.php">
                             <li>Galary</li> 
                         </a>
-                        <a href="../../frontend/user/Facilities.php">
+                        <a href="../../frontend/user/facilities.php">
                             <li>Facilities</li> 
                         </a>
-                        <a href="../../frontend/user/Offers.php">
+                        <a href="../../frontend/user/offers.php">
                             <li>Offers</li> 
                         </a>
-                        <a href="../../frontend/user/About.php">
+                        <a href="../../frontend/user/about.php">
                             <li>About</li> 
+                        </a>
+                        <a href="../../frontend/user/reservation.php">
+                            <li>Reservation</li> 
                         </a>
                 </ul>
             </div>
@@ -99,13 +119,28 @@
             </div>
             <div class="search-input">
                 <div>
-                    <input type="text" placeholder="Search">
+                    <a href="../../frontend/user/searchpage.php">
+                        <input type="search" id="search-box" name="Search-box">
+                    </a>
                 </div>
                 <button class="search_btn">Search</button>
             </div>
             <div class="icon">
-                <a href=""><i class="material-icons">&#xe853;</i></a>
-                <a href=""><i class="material-icons">&#xe8cc;</i></a>
+                <ul>
+
+                    <?php
+                    if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                    } else {
+                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                    }
+                    ?>
+                    <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
+                    <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                        </a></li>
+
+                </ul> 
             </div>
         </div>
     </header>
@@ -167,5 +202,6 @@
         </div>
     </div>
     <script src="app.js"></script>
+    <script src="../../frontend/user/search.js"></script>
 </body>
 </html>

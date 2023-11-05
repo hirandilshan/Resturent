@@ -2,80 +2,100 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>LOGIN</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="../../css/signup.css">
-        <link rel="stylesheet" type="text/css" href="../../css/headerFooter.css">
-    </head>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAT OUT Restaurant</title>
+    <meta name="viewport" content="width=device-width,initial-scal=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <div class="header">
+            <div class="headerbar">
+                <div class="account"> 
+                    <ul>
 
-    <body>
-        <div class="wrapper">
-            <div class="top-bar clearfix">
-                <div class="top-bar-links">
-                
-                <ul>
-                    <li><a href="../../frontend/user/signup.php">Sign up</a></li>
-                    <?php
-                        if(isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                        <?php
+                        if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
                             echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
+                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
                             echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
                         }
-                    ?>
-                    <li><a href="../../frontend/user/menu.php">Order Now</a></li>
-                    <li><a href="../../frontend/user/cart.php"><i class="fa fa-shopping-cart"></i>
-                    </a></li>
-                                        
-                </ul>
-                </div><!--top-bar-links-->
-
-                <div class="search-bar">
-                <form>    
-                    <a href="../../frontend/user/searchpage.php">
-                        <input type="search" id="search-box" name="Search-box">
-                    </a>
-                    <button type="submit"></button>
-                </form>
-                </div><!--search-bar-->
-        
-            </div><!--top-bar-->
-            <header>
-                <div class="logo">
-                    <h1>Signature cuisine</h1>
-                    <p>Resturent chain</p>
-                    
-                </div><!--logo-->
-
-                <div class="socialM">
-                    <ul>
-                        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook fa-fw"></i>
-                        </a></li>
-                        <li><a href="https://www.instagram.com/"><i class="fab fa-instagram fa-fw"></i>
-                        </a></li>
-                        <li><a href="https://twitter.com/"><i class="fab fa-twitter fa-fw"></i>
-                        </a></li>
+                        ?>
                         
-                        
+                        <a href="#">
+                            <li>
+                                <i class="material-icons" id="search-icon1">&#xe8b6;</i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <a href="../../frontend/user/searchpage.php">
+                            <input type="search" id="search-box" name="Search-box">
+                            </a>
+                            <i class="material-icons">&#xe8b6;</i>
+                        </div>
                     </ul>
-
-                </div><!--Social media-->
-            </header>
-            <nav>
+                    
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="../../frontend/admin/adminHome.php"><li>Home</li> </a>
+                        <a href="../../frontend/admin/manageReservation.php"><li>Manage Reservation</li> </a> 
+                        <a href="../../frontend/admin/manageFood.php"><li>Manage Food Items</li> </a>
+                        <a href="../../frontend/admin/manageReview.php"><li>Customer Reviews</li> </a>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="logo">
+                <a href="../../frontend/admin/adminHome.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+            </div>
+            <div class="nav">
                 <ul>
-                    <li><a href="../../frontend/user/index.php">Home</a></li>
-                    <li><a href="../../frontend/user/menu.php">Our Menu</a></li>
-                    <li><a href="../../frontend/user/facility.php">Facilities</a></li>
-                    <li><a href="../../frontend/user/service.php">Service Types</a></li>
-                    
-                    <li><a href="../../frontend/user/offers.php">offers</a></li>
-                    <li><a href="../../frontend/user/gallary.php">Gallary</a></li>
-                    <li><a href="../../frontend/user/aboutUs.php">About Us</a></li>
-                    <li><a href="../../frontend/user/reservation.php">Reservation</a></li>
-                    
+                        <a href="../../frontend/admin/adminHome.php"><li>Home</li> </a>
+                        <a href="../../frontend/admin/manageReservation.php"><li>Manage Reservation</li> </a> 
+                        <a href="../../frontend/admin/manageFood.php"><li>Manage Food Items</li> </a>
+                        <a href="../../frontend/admin/manageReview.php"><li>Customer Reviews</li> </a>
+                    </ul>
+            </div>
+            <div class="bar">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="material-icons" id="navbar-icon">&#xe5d2;</i>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <i class="material-icons" id="cancel">&#xe5c9;</i>
+                        </li>
+                    </a>
                 </ul>
-            </nav>
+            </div>
+            <div class="icon">
+                <ul>
+
+                    <?php
+                    if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                    } else {
+                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                    }
+                    ?>
+                    
+
+                </ul> 
+            </div>
+        </div>
+    </header>
             
 
             <?php
@@ -117,5 +137,24 @@ session_start();
                 
             echo "</div>";
             ?>
+                <div class="footer">
+        <div class="footer-1">
+            <div class="logo">
+                <img src="../../images/eatout logo.jpg" alt="">
+            </div>
+            <div>
+                <address>
+                    <p>Email:hirannishshanka@gmail.com</p>
+                    <p>GitHub: <a href="https://github.com/hirandilshan">hirandilshan</a></p>
+                    <p>Mr.Hiran Nishshanka,<br>Kegalle,<br>SriLanka.</p>
+                </address>
+            </div>
+        </div>
+        <div class="footer-2">
+            <img src="../../images/download.jpeg" alt="">
+            <h2>Powered by <em>HD Creations</em></h2>
+        </div>
+    </div>
+    <script src="../../frontend/user/app.js"></script>
         </body>
 </html>

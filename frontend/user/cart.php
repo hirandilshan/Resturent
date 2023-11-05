@@ -5,7 +5,7 @@ session_start();
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/galary.css">
+    <link rel="stylesheet" href="../../css/index.css">
     <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -144,30 +144,73 @@ session_start();
             </div>
         </div>
     </header>
-    <div class="gallery">
-        <br>
-        
-          <img src="../../img/table.jpeg" alt=" Image ">                              
-          <img src="../../img/bugers.jpeg" alt=" Image ">
-          <img src="../../img/gal11.jpeg" alt=" Image ">                            
-          <img src="../../img/gal1.jpeg" alt=" Image ">
-          <img src="../../img/gal4.jpeg" alt=" Image ">                             
-          <img src="../../img/gal7.jpeg" alt=" Image ">
-          <img src="../../img/gal9.jpeg" alt=" Image ">                              
-          <img src="../../img/gal.jpeg" alt=" Image ">
-          <img src="../../img/gal12.jpeg" alt=" Image ">                              
-          <img src="../../img/gal10.jpeg" alt=" Image ">
-          <img src="../../img/gal13.jpeg" alt=" Image ">                              
-          <img src="../../img/gal6.jpeg" alt=" Image ">
-          <img src="../../img/gal9.jpeg" alt=" Image ">                              
-          <img src="../../img/gal2.jpeg" alt=" Image ">
-          <img src="../../img/gal5.jpeg" alt=" Image ">                              
-          <img src="../../img/gal8.jpeg" alt=" Image ">
-          <img src="../../img/gal4.jpeg" alt=" Image ">                              
-          <img src="../../img/gal7.jpeg" alt=" Image ">
-        
-        
-    </div>
+    <div class="cart-container">
+            <?php
+                include_once '../../backend/user/dbs.php';
+
+                $userName = $_SESSION['userName'];
+
+                $sql = "SELECT * FROM cart WHERE userName='$userName';";
+                $result = mysqli_query($connect, $sql);
+
+                echo '<table>';
+                echo '<tr><th>Food ID</th><th>Item</th><th>Price</th><th>(-)</th><th>Number of Items</th><th>(+)</th><th>Remove</th></tr>';
+
+                $total = 0; 
+
+                while ($row = $result->fetch_assoc()) {
+                    $foodId = $row["foodId"];
+                    $item = $row["item"];
+                    $price = $row["price"];
+                    $numOfItems = $row["numOfItems"];
+
+                    $itemTotal = $price * $numOfItems;
+                    $total += $itemTotal; 
+
+                    echo '<tr>';
+                    echo "<td>$foodId</td>";
+                    echo "<td>$item</td>";
+                    echo "<td>$price</td>";
+                    echo "<td>";
+                    echo "<form method='POST' action='../../backend/user/reductFromCart.php'>";
+                    echo "<input type='hidden' name='foodId' value='$foodId'>";
+                    echo "<button type='submit' name='minus'>(-)</button>";
+                    echo "</form>";
+                    echo "</td>";
+                    echo "<td>$numOfItems</td>";
+                    echo "<td>";
+                    echo "<form method='POST' action='../../backend/user/addFromCart.php'>";
+                    echo "<input type='hidden' name='foodId' value='$foodId'>";
+                    echo "<button type='submit' name='plus'>(+)</button>";
+                    echo "</form>";
+                    echo "</td>";
+                    echo "<td>";
+                    echo "<form method='POST' action='../../backend/user/removeFromCart.php'>";
+                    echo "<input type='hidden' name='foodId' value='$foodId'>";
+                    echo "<button type='submit' name='remove'>Remove</button>";
+                    echo "</form>";
+                    echo "</td>";
+                    echo '</tr>';
+                }
+
+                echo '</table>';
+                echo '<h2>Your Cart</h2>';
+                echo '<div class="cart-items"></div>';
+                echo '<div class="total">';
+                echo '<h3>Total:</h3>';
+                echo "<p id='cart-total'>$total</p>";
+                echo '</div>';
+                echo '<button id="checkout-btn" disabled>Proceed to Checkout</button>';
+            ?>
+
+            
+        </div>
+
+
+
+
+
+
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
@@ -186,7 +229,7 @@ session_start();
             <h2>Powered by <em>HD Creations</em></h2>
         </div>
     </div>
-    <script src="app.js"></script>
+    <script src="../../frontend/user/app.js"></script>
     <script src="../../frontend/user/search.js"></script>
 </body>
 </html>
