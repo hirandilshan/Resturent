@@ -144,91 +144,105 @@ session_start();
             </div>
         </div>
     </header>
-    <div class="intro">
-            <div class="intro-image">
-                <img src="../../img/menu.jpg" alt="menu">
-                <h1>Our Menu</h1>
-            </div><!--intro Img-->
-        </div><!--Introduction-->
+            <menu>
 
-        <div class="menu">
-            <div class="section">
-                <h2>Burgers</h2>
-                <a href="burgers.php">
-                    <img src="../../img/buger.jpeg" alt="Burger">
-                </a>
+            <div class="list">
+                <a href="../../frontend/user/menu.php">Back to Menu</a>
 
-            </div><!--Section-->
+                <div class="section">
+                    <img src="../../img/buger.jpeg" alt="option1">
+                    <a href="burgers.php">Burgers</a>
+                </div>
+                <div class="section">
+                    <img src="../../img/nuggets.jpeg" alt="option2">
+                    <a href="nuggets.php">Nuggets</a>
+                </div>
+                <div class="section">
+                    <img src="../../img/salads.jpeg" alt="option3">
+                    <a href="salads.php">Salads</a>
+                </div>
+                <div class="section">
+                    <img src="../../img/fries.jpeg" alt="option4">
+                    <a href="fries.php">Fries</a>
+                </div>
+                <div class="section">
+                    <img src="../../img/muffin.jpeg" alt="option5">
+                    <a href="muffins.php">Muffins</a>
+                </div>
+                <div class="section">
+                    <img src="../../img/biskcuit.jpeg" alt="option6">
+                    <a href="biscutes.php">Biscuits</a>
+                </div>
+                <div class="section">
+                    <img src="../../img/ices.jpeg" alt="option7">
+                    <a href="ice.php">Frosty</a>
+                </div>
+                <div class="section">
+                    <img src="../../img/bev.jpeg" alt="option8">
+                    <a href="beverage.php">Drinks</a>
+                </div>
+                <div class="section">
+                    <img src="../../img/coffee.jpeg" alt="option9">
+                    <a href="coffee.php">Coffee</a>
+                </div>
 
-            <div class="section">
-                <h2>Nuggets</h2>
-                <a href="nuggets.php">
-                    <img src="../../img/nugget.jpeg" alt="Nuggets">
-                </a>
+                <div class="section">
+                    <img src="../../img/pizza.jpeg" alt="option10">
+                    <a href="pizza.php">Pizza</a>
+                </div>
+                <div class="section">
+                    <img src="../../img/sides.jpeg" alt="option11">
+                    <a href="sides.php">Sides</a>
+                </div>
+                <div class="section">
+                    <img src="../../img/mealDeals.jpeg" alt="option12">
+                    <a href="deals.php">Deals</a>
+                </div>
 
-            </div><!--Section-->
+            </div><!--list-->
+            <div class="choice">
+                <p>Fries</p>
+                <div class="foods">
 
-            <div class="section">
-                <h2>Salads</h2>
-                <a href="salads.php">
-                    <img src="../../img/salads.jpeg" alt="Salads">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Fries</h2>
-                <a href="fries.php">
-                    <img src="../../img/fries.jpeg" alt="Fries">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Muffins</h2>
-                <a href="muffins.php">
-                    <img src="../../img/muffin.jpeg" alt="Muffins">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Biscuits</h2>
-                <a href="biscutes.php">
-                    <img src="../../img/biskcuit.jpeg" alt="Biscuits">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Frosty</h2>
-                <a href="ice.php">
-                    <img src="../../img/ices.jpeg" alt="Ice creams">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Drinks</h2>
-                <a href="beverage.php">
-                    <img src="../../img/bev.jpeg" alt="Beverages">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Coffee</h2>
-                <a href="coffee.php">
-                    <img src="../../img/coffee1.jpeg" alt="Coffee">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Pizza</h2>
-                <a href="pizza.php">
-                    <img src="../../img/pizza.jpeg" alt="Pizza">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Sides & more</h2>
-                <a href="sides.php">
-                    <img src="../../img/sides.jpeg" alt="Sides & more">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Meal Deals</h2>
-                <a href="deals.php">
-                    <img src="../../img/mealDeals.jpeg" alt="Meal Deals">
-                </a>
-            </div><!--Section-->
-        </div>
+
+
+                    <?php
+                    include_once '../../backend/user/dbs.php';  // Include your database connection file
+                    $sql = "SELECT * FROM foods WHERE foodType='Fries';";
+                    $result = mysqli_query($connect, $sql);
+
+
+
+                    while ($row = $result->fetch_assoc()) {
+                        // Access the data by column name
+
+                        $foodId = $row["foodId"];
+                        $item = $row["item"];
+                        $img = $row["img"];
+                        $price = $row["price"];
+
+                        echo '<div class="food-item">';
+                        echo "<img src='$img' alt='Food 1'>";
+                        echo "<h3> $item</h3>";
+                        echo "<h4>Rs $price</h4>";
+                        echo "<form method='POST' action='../../backend/user/cartP.php'>";
+                        echo "<input type='hidden' name='foodId' value='$foodId'>";
+                        echo "<input type='hidden' name='item' value='$item'>";
+                        echo "<input type='hidden' name='price' value='$price'>";
+                        echo "<button type='submit' name='addToCart'>Add to Cart</button>";
+                        echo "</form>";
+                        echo '</div>';
+                    }
+
+
+                    $connect->close();
+
+                    ?>
+                </div><!--foods-->
+                        </div><!--choice-->
+
+
+        </menu>
 
 
 
