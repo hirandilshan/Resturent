@@ -6,6 +6,7 @@ session_start();
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/food.css">
     <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -145,7 +146,7 @@ session_start();
         </div>
     </header>
 
-            <menu>
+            <div class="menu">
 
             <div class="list">
                 <a href="../../frontend/user/menu.php">Back to Menu</a>
@@ -243,7 +244,7 @@ session_start();
                         </div><!--choice-->
 
 
-        </menu>
+        </div>
 
 
 
