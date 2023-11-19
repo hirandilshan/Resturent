@@ -1,19 +1,24 @@
-*{
-    margin: 0; 
+* {
+    margin: 0;
     padding: 0;
 }
-a{ text-decoration: none;}
 
-.clearfix{overflow: auto;}
+a {
+    text-decoration: none;
+}
 
-.wrapper{
-    margin:0 auto;
+.clearfix {
+    overflow: auto;
+}
+
+.wrapper {
+    margin: 0 auto;
     width: 100%;
 }
 
 
-.results{
-    width:100%;
+.results {
+    width: 100%;
     padding-top: 200px;
 
 }
@@ -26,7 +31,7 @@ a{ text-decoration: none;}
 
 div.choice {
     text-align: center;
-    width: 100%; 
+    width: 100%;
     margin: 25px auto;
     padding: 10px;
     padding-top: 100px;
@@ -40,6 +45,7 @@ div.choice {
     padding-bottom: 20px;
     text-align: center;
 }
+
 div.choice div.foods {
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +53,7 @@ div.choice div.foods {
 }
 
 div.foods div.food-item {
-    width: 250px; 
+    width: 250px;
     margin: 10px;
     text-align: center;
     border: 1px solid #ccc;
@@ -73,7 +79,7 @@ div.foods div.food-item {
     margin: 10px 0;
 }
 
-  
+
 button {
     padding: 5px 10px;
     background-color: #300a0a;

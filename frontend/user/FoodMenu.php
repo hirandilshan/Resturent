@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
@@ -14,6 +15,7 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <header>
 
@@ -41,14 +43,14 @@ session_start();
                             </li>
                         </a>
                         <div class="search" id="searchinput1">
-                        <form method="POST" action="../../frontend/user/searchP.php">
+                            <form method="POST" action="../../frontend/user/searchP.php">
                                 <input type="search" id="search-box" name="Search-box">
-                            
-                            <button class="search_btn" type="submit" id="searchBtn">Search</button>
+
+                                <button class="search_btn" type="submit" id="searchBtn">Search</button>
 
 
-                            
-                                
+
+
                             </form>
                         </div>
                     </ul>
@@ -153,90 +155,90 @@ session_start();
         </div>
     </header>
     <div class="intro">
-            <div class="intro-image">
-                <img src="../../img/menu.jpg" alt="menu">
-                <h1>Our Menu</h1>
-            </div><!--intro Img-->
-        </div><!--Introduction-->
+        <div class="intro-image">
+            <img src="../../img/menu.jpg" alt="menu">
+            <h1>Our Menu</h1>
+        </div><!--intro Img-->
+    </div><!--Introduction-->
 
-        <div class="menu">
-            <div class="section">
-                <h2>Burgers</h2>
-                <a href="burgers.php">
-                    <img src="../../img/buger.jpeg" alt="Burger">
-                </a>
+    <div class="menu">
+        <div class="section">
+            <h2>Burgers</h2>
+            <a href="burgers.php">
+                <img src="../../img/buger.jpeg" alt="Burger">
+            </a>
 
-            </div><!--Section-->
+        </div><!--Section-->
 
-            <div class="section">
-                <h2>Nuggets</h2>
-                <a href="nuggets.php">
-                    <img src="../../img/nugget.jpeg" alt="Nuggets">
-                </a>
+        <div class="section">
+            <h2>Nuggets</h2>
+            <a href="nuggets.php">
+                <img src="../../img/nugget.jpeg" alt="Nuggets">
+            </a>
 
-            </div><!--Section-->
+        </div><!--Section-->
 
-            <div class="section">
-                <h2>Salads</h2>
-                <a href="salads.php">
-                    <img src="../../img/salads.jpeg" alt="Salads">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Fries</h2>
-                <a href="fries.php">
-                    <img src="../../img/fries.jpeg" alt="Fries">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Muffins</h2>
-                <a href="muffins.php">
-                    <img src="../../img/muffin.jpeg" alt="Muffins">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Biscuits</h2>
-                <a href="biscutes.php">
-                    <img src="../../img/biskcuit.jpeg" alt="Biscuits">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Frosty</h2>
-                <a href="ice.php">
-                    <img src="../../img/ices.jpeg" alt="Ice creams">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Drinks</h2>
-                <a href="beverage.php">
-                    <img src="../../img/bev.jpeg" alt="Beverages">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Coffee</h2>
-                <a href="coffee.php">
-                    <img src="../../img/coffee1.jpeg" alt="Coffee">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Pizza</h2>
-                <a href="pizza.php">
-                    <img src="../../img/pizza.jpeg" alt="Pizza">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Sides & more</h2>
-                <a href="sides.php">
-                    <img src="../../img/sides.jpeg" alt="Sides & more">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Meal Deals</h2>
-                <a href="deals.php">
-                    <img src="../../img/mealDeals.jpeg" alt="Meal Deals">
-                </a>
-            </div><!--Section-->
-        </div>
+        <div class="section">
+            <h2>Salads</h2>
+            <a href="salads.php">
+                <img src="../../img/salads.jpeg" alt="Salads">
+            </a>
+        </div><!--Section-->
+        <div class="section">
+            <h2>Fries</h2>
+            <a href="fries.php">
+                <img src="../../img/fries.jpeg" alt="Fries">
+            </a>
+        </div><!--Section-->
+        <div class="section">
+            <h2>Muffins</h2>
+            <a href="muffins.php">
+                <img src="../../img/muffin.jpeg" alt="Muffins">
+            </a>
+        </div><!--Section-->
+        <div class="section">
+            <h2>Biscuits</h2>
+            <a href="biscutes.php">
+                <img src="../../img/biskcuit.jpeg" alt="Biscuits">
+            </a>
+        </div><!--Section-->
+        <div class="section">
+            <h2>Frosty</h2>
+            <a href="ice.php">
+                <img src="../../img/ices.jpeg" alt="Ice creams">
+            </a>
+        </div><!--Section-->
+        <div class="section">
+            <h2>Drinks</h2>
+            <a href="beverage.php">
+                <img src="../../img/bev.jpeg" alt="Beverages">
+            </a>
+        </div><!--Section-->
+        <div class="section">
+            <h2>Coffee</h2>
+            <a href="coffee.php">
+                <img src="../../img/coffee1.jpeg" alt="Coffee">
+            </a>
+        </div><!--Section-->
+        <div class="section">
+            <h2>Pizza</h2>
+            <a href="pizza.php">
+                <img src="../../img/pizza.jpeg" alt="Pizza">
+            </a>
+        </div><!--Section-->
+        <div class="section">
+            <h2>Sides & more</h2>
+            <a href="sides.php">
+                <img src="../../img/sides.jpeg" alt="Sides & more">
+            </a>
+        </div><!--Section-->
+        <div class="section">
+            <h2>Meal Deals</h2>
+            <a href="deals.php">
+                <img src="../../img/mealDeals.jpeg" alt="Meal Deals">
+            </a>
+        </div><!--Section-->
+    </div>
 
 
 
@@ -264,4 +266,5 @@ session_start();
     <script src="../../frontend/user/app.js"></script>
     <script src="../../frontend/user/search.js"></script>
 </body>
+
 </html>

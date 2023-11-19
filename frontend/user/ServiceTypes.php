@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
@@ -14,6 +15,7 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <header>
 
@@ -41,14 +43,14 @@ session_start();
                             </li>
                         </a>
                         <div class="search" id="searchinput1">
-                        <form method="POST" action="../../frontend/user/searchP.php">
+                            <form method="POST" action="../../frontend/user/searchP.php">
                                 <input type="search" id="search-box" name="Search-box">
-                            
-                            <button class="search_btn" type="submit" id="searchBtn">Search</button>
+
+                                <button class="search_btn" type="submit" id="searchBtn">Search</button>
 
 
-                            
-                                
+
+
                             </form>
                         </div>
                     </ul>
@@ -153,7 +155,7 @@ session_start();
         </div>
     </header>
     <div class="content">
-    <div class="intro">
+        <div class="intro">
             <div class="intro-image">
                 <img src="../../img/servis.jpg" alt="Services">
                 <h1>Our Service Types</h1>
@@ -173,7 +175,7 @@ session_start();
             </div>
             <div class="service-type">
                 <img src="../../img/delivery.jpeg" alt="Delivery">
-                
+
                 <h3>Delivery</h3>
                 <a href="../../frontend/user/menu.php" class="button">Order Now</a>
                 <p>We'll deliver your meal right to your doorstep.Enjoy a restaurant-quality meal in the comfort of your own home without any hassle.</p>
@@ -182,7 +184,7 @@ session_start();
         </div><!--Services-->
 
     </div>
-    
+
 
 
 
@@ -215,4 +217,5 @@ session_start();
     <script src="app.js"></script>
     <script src="../../frontend/user/search.js"></script>
 </body>
+
 </html>

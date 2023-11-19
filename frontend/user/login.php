@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
@@ -14,6 +15,7 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <header>
 
@@ -41,14 +43,14 @@ session_start();
                             </li>
                         </a>
                         <div class="search" id="searchinput1">
-                        <form method="POST" action="../../frontend/user/searchP.php">
+                            <form method="POST" action="../../frontend/user/searchP.php">
                                 <input type="search" id="search-box" name="Search-box">
-                            
-                            <button class="search_btn" type="submit" id="searchBtn">Search</button>
+
+                                <button class="search_btn" type="submit" id="searchBtn">Search</button>
 
 
-                            
-                                
+
+
                             </form>
                         </div>
                     </ul>
@@ -154,32 +156,32 @@ session_start();
     </header>
     <div class="content">
         <div class="forms">
-                <div class="form-details">
-                    <h2>Welcome to EAT OUT</h2>
-                    <p>Please log in using your personal information to stay connected with us.</p>
-                </div>
-                <div class="form-content">
+            <div class="form-details">
+                <h2>Welcome to EAT OUT</h2>
+                <p>Please log in using your personal information to stay connected with us.</p>
+            </div>
+            <div class="form-content">
 
-                    <form method="POST" action="../../backend/user/loginP.php">
-                        <div class="inputs">
-                            <input type="email" name="email" placeholder="E-mail" required>
-                            <label>Email</label>
-                        </div>
-                        <div class="inputs">
-                            <input type="password" required name="password" placeholder="password" required>
-                            <label>Password</label>
-                        </div>
-                        <a href="#" class="forgot-pass">Forgot password?</a>
-                        <button type="submit">Log In</button>
-                    </form>
-                    <div class="link">
-                        Don't have an account?
-                        <a href="../../frontend/user/signup.php" id="signup-link">Signup</a>
+                <form method="POST" action="../../backend/user/loginP.php">
+                    <div class="inputs">
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <label>Email</label>
                     </div>
+                    <div class="inputs">
+                        <input type="password" required name="password" placeholder="password" required>
+                        <label>Password</label>
+                    </div>
+                    <a href="#" class="forgot-pass">Forgot password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="link">
+                    Don't have an account?
+                    <a href="../../frontend/user/signup.php" id="signup-link">Signup</a>
                 </div>
-        </div>            
+            </div>
+        </div>
     </div>
-    
+
 
 
 
@@ -206,4 +208,5 @@ session_start();
     <script src="../../frontend/user/app.js"></script>
     <script src="../../frontend/user/search.js"></script>
 </body>
+
 </html>

@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
@@ -14,6 +15,7 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <header>
 
@@ -41,14 +43,14 @@ session_start();
                             </li>
                         </a>
                         <div class="search" id="searchinput1">
-                        <form method="POST" action="../../frontend/user/searchP.php">
+                            <form method="POST" action="../../frontend/user/searchP.php">
                                 <input type="search" id="search-box" name="Search-box">
-                            
-                            <button class="search_btn" type="submit" id="searchBtn">Search</button>
+
+                                <button class="search_btn" type="submit" id="searchBtn">Search</button>
 
 
-                            
-                                
+
+
                             </form>
                         </div>
                     </ul>
@@ -169,7 +171,7 @@ session_start();
             <img src="../../img/lunchCombo.jpeg" alt="Offer Image 2">
             <h3>Lunch Combo</h3>
             <p>Delicious lunch combo at 5% discounted price. Available every weekday.</p>
-          <div class="offer-details">
+            <div class="offer-details">
                 <ul>
                     <li>Available from 11:00 AM to 2:30 PM.</li>
                     <li>Choose from a variety of combos based on your preferences.</li>
@@ -183,13 +185,13 @@ session_start();
             <p>Feast with your family with our specially curated family meal deal. Perfect for a family night out.</p>
             <div class="offer-details">
                 <ul>
-                  <li>Valid for a group of 4 or more.</li>
-                  <li>Includes a choice of main course, sides, and beverages for each member.</li>
-                  <li>Book in advance for a seamless dining experience.</li>
+                    <li>Valid for a group of 4 or more.</li>
+                    <li>Includes a choice of main course, sides, and beverages for each member.</li>
+                    <li>Book in advance for a seamless dining experience.</li>
                 </ul>
             </div>
         </div>
-        
+
     </div>
     <div class="footer">
         <div class="footer-1">
@@ -212,4 +214,5 @@ session_start();
     <script src="app.js"></script>
     <script src="../../frontend/user/search.js"></script>
 </body>
+
 </html>

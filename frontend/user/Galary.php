@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/galary.css">
@@ -13,6 +14,7 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <header>
 
@@ -40,14 +42,14 @@ session_start();
                             </li>
                         </a>
                         <div class="search" id="searchinput1">
-                        <form method="POST" action="../../frontend/user/searchP.php">
+                            <form method="POST" action="../../frontend/user/searchP.php">
                                 <input type="search" id="search-box" name="Search-box">
-                            
-                            <button class="search_btn" type="submit" id="searchBtn">Search</button>
+
+                                <button class="search_btn" type="submit" id="searchBtn">Search</button>
 
 
-                            
-                                
+
+
                             </form>
                         </div>
                     </ul>
@@ -153,27 +155,27 @@ session_start();
     </header>
     <div class="gallery">
         <br>
-        
-          <img src="../../img/table.jpeg" alt=" Image ">                              
-          <img src="../../img/bugers.jpeg" alt=" Image ">
-          <img src="../../img/gal11.jpeg" alt=" Image ">                            
-          <img src="../../img/gal1.jpeg" alt=" Image ">
-          <img src="../../img/gal4.jpeg" alt=" Image ">                             
-          <img src="../../img/gal7.jpeg" alt=" Image ">
-          <img src="../../img/gal9.jpeg" alt=" Image ">                              
-          <img src="../../img/gal.jpeg" alt=" Image ">
-          <img src="../../img/gal12.jpeg" alt=" Image ">                              
-          <img src="../../img/gal10.jpeg" alt=" Image ">
-          <img src="../../img/gal13.jpeg" alt=" Image ">                              
-          <img src="../../img/gal6.jpeg" alt=" Image ">
-          <img src="../../img/gal9.jpeg" alt=" Image ">                              
-          <img src="../../img/gal2.jpeg" alt=" Image ">
-          <img src="../../img/gal5.jpeg" alt=" Image ">                              
-          <img src="../../img/gal8.jpeg" alt=" Image ">
-          <img src="../../img/gal4.jpeg" alt=" Image ">                              
-          <img src="../../img/gal7.jpeg" alt=" Image ">
-        
-        
+
+        <img src="../../img/table.jpeg" alt=" Image ">
+        <img src="../../img/bugers.jpeg" alt=" Image ">
+        <img src="../../img/gal11.jpeg" alt=" Image ">
+        <img src="../../img/gal1.jpeg" alt=" Image ">
+        <img src="../../img/gal4.jpeg" alt=" Image ">
+        <img src="../../img/gal7.jpeg" alt=" Image ">
+        <img src="../../img/gal9.jpeg" alt=" Image ">
+        <img src="../../img/gal.jpeg" alt=" Image ">
+        <img src="../../img/gal12.jpeg" alt=" Image ">
+        <img src="../../img/gal10.jpeg" alt=" Image ">
+        <img src="../../img/gal13.jpeg" alt=" Image ">
+        <img src="../../img/gal6.jpeg" alt=" Image ">
+        <img src="../../img/gal9.jpeg" alt=" Image ">
+        <img src="../../img/gal2.jpeg" alt=" Image ">
+        <img src="../../img/gal5.jpeg" alt=" Image ">
+        <img src="../../img/gal8.jpeg" alt=" Image ">
+        <img src="../../img/gal4.jpeg" alt=" Image ">
+        <img src="../../img/gal7.jpeg" alt=" Image ">
+
+
     </div>
     <div class="footer">
         <div class="footer-1">
@@ -196,4 +198,5 @@ session_start();
     <script src="app.js"></script>
     <script src="../../frontend/user/search.js"></script>
 </body>
+
 </html>

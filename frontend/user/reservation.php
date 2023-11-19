@@ -234,26 +234,26 @@ session_start();
 
 
 
-        <div class="footer">
-            <div class="footer-1">
-                <div class="logo">
-                    <img src="../../images/eatout logo.jpg" alt="">
-                </div>
-                <div>
-                    <address>
-                        <p>Email:hirannishshanka@gmail.com</p>
-                        <p>GitHub: <a href="https://github.com/hirandilshan">hirandilshan</a></p>
-                        <p>Mr.Hiran Nishshanka,<br>Kegalle,<br>SriLanka.</p>
-                    </address>
-                </div>
+    <div class="footer">
+        <div class="footer-1">
+            <div class="logo">
+                <img src="../../images/eatout logo.jpg" alt="">
             </div>
-            <div class="footer-2">
-                <img src="../../images/download.jpeg" alt="">
-                <h2>Powered by <em>HD Creations</em></h2>
+            <div>
+                <address>
+                    <p>Email:hirannishshanka@gmail.com</p>
+                    <p>GitHub: <a href="https://github.com/hirandilshan">hirandilshan</a></p>
+                    <p>Mr.Hiran Nishshanka,<br>Kegalle,<br>SriLanka.</p>
+                </address>
             </div>
         </div>
-        <script src="../../frontend/user/app.js"></script>
-        <script src="../../frontend/user/search.js"></script>
+        <div class="footer-2">
+            <img src="../../images/download.jpeg" alt="">
+            <h2>Powered by <em>HD Creations</em></h2>
+        </div>
+    </div>
+    <script src="../../frontend/user/app.js"></script>
+    <script src="../../frontend/user/search.js"></script>
 </body>
 
 </html>

@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
@@ -14,12 +15,13 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        
+
         <div class="header">
             <div class="headerbar">
-                <div class="account"> 
+                <div class="account">
                     <ul>
 
                         <?php
@@ -30,7 +32,7 @@ session_start();
                             echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
                         }
                         ?>
-                        
+
                         <a href="#">
                             <li>
                                 <i class="material-icons" id="search-icon1">&#xe8b6;</i>
@@ -38,33 +40,49 @@ session_start();
                         </a>
                         <div class="search" id="searchinput1">
                             <a href="../../frontend/user/searchpage.php">
-                            <input type="search" id="search-box" name="Search-box">
+                                <input type="search" id="search-box" name="Search-box">
                             </a>
                             <i class="material-icons">&#xe8b6;</i>
                         </div>
                     </ul>
-                    
+
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="../../frontend/admin/adminHome.php"><li>Home</li> </a>
-                        <a href="../../frontend/admin/manageReservation.php"><li>Manage Reservation</li> </a> 
-                        <a href="../../frontend/admin/manageFood.php"><li>Manage Food Items</li> </a>
-                        <a href="../../frontend/admin/manageReview.php"><li>Customer Reviews</li> </a>
+                        <a href="../../frontend/admin/adminHome.php">
+                            <li>Home</li>
+                        </a>
+                        <a href="../../frontend/admin/manageReservation.php">
+                            <li>Manage Reservation</li>
+                        </a>
+                        <a href="../../frontend/admin/manageFood.php">
+                            <li>Manage Food Items</li>
+                        </a>
+                        <a href="../../frontend/admin/manageReview.php">
+                            <li>Customer Reviews</li>
+                        </a>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="logo">
-                <a href="../../frontend/admin/adminHome.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+                <a href="../../frontend/admin/adminHome.php"><img src="../../images/eatout logo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                        <a href="../../frontend/admin/adminHome.php"><li>Home</li> </a>
-                        <a href="../../frontend/admin/manageReservation.php"><li>Manage Reservation</li> </a> 
-                        <a href="../../frontend/admin/manageFood.php"><li>Manage Food Items</li> </a>
-                        <a href="../../frontend/admin/manageReview.php"><li>Customer Reviews</li> </a>
-                    </ul>
+                    <a href="../../frontend/admin/adminHome.php">
+                        <li>Home</li>
+                    </a>
+                    <a href="../../frontend/admin/manageReservation.php">
+                        <li>Manage Reservation</li>
+                    </a>
+                    <a href="../../frontend/admin/manageFood.php">
+                        <li>Manage Food Items</li>
+                    </a>
+                    <a href="../../frontend/admin/manageReview.php">
+                        <li>Customer Reviews</li>
+                    </a>
+                </ul>
             </div>
             <div class="bar">
                 <ul>
@@ -91,55 +109,55 @@ session_start();
                         echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
                     }
                     ?>
-                    
 
-                </ul> 
+
+                </ul>
             </div>
         </div>
     </header>
     <div class="content">
-    <div class="intro">
+        <div class="intro">
             <div class="intro-topic">
                 <h1>Manage Reviews</h1>
             </div><!--intro Img-->
-            
-    </div>
+
+        </div>
         <?php
-            include_once '../../backend/user/dbs.php';  // Include your database connection file
-            $sql = "SELECT * FROM review;";
-            $result = mysqli_query($connect, $sql);
-            
-            echo '<table>';
-            echo '<tr><th>Review ID</th><th>Review</th><th>User</th><th>Remove</th></tr>';
+        include_once '../../backend/user/dbs.php';  // Include your database connection file
+        $sql = "SELECT * FROM review;";
+        $result = mysqli_query($connect, $sql);
 
-            while ($row = $result->fetch_assoc()) {
-                // Access the data by column name
-                $revId=$row["revId"];
-                $review = $row["review"];
-                $userName = $row["userName"];
+        echo '<table>';
+        echo '<tr><th>Review ID</th><th>Review</th><th>User</th><th>Remove</th></tr>';
 
-                echo '<tr>';
-                echo "<td>$revId</td>";
-                echo "<td>$review</td>";
-                echo "<td>$userName</td>";
-                echo "<td>";
-                echo "<form method='POST' action='../../backend/admin/manageReviewP.php'>";
-                echo "<input type='hidden' name='revId' value='$revId'>";
-                echo "<button type='submit' name='remove'>Remove</button>";
-                echo "</form>";
-                echo "</td>";
-                echo '</tr>';
-            }
+        while ($row = $result->fetch_assoc()) {
+            // Access the data by column name
+            $revId = $row["revId"];
+            $review = $row["review"];
+            $userName = $row["userName"];
 
-            echo '</table>';
-                
+            echo '<tr>';
+            echo "<td>$revId</td>";
+            echo "<td>$review</td>";
+            echo "<td>$userName</td>";
+            echo "<td>";
+            echo "<form method='POST' action='../../backend/admin/manageReviewP.php'>";
+            echo "<input type='hidden' name='revId' value='$revId'>";
+            echo "<button type='submit' name='remove'>Remove</button>";
+            echo "</form>";
+            echo "</td>";
+            echo '</tr>';
+        }
+
+        echo '</table>';
+
 
         $connect->close();
 
         ?>
     </div>
-    
-            <div class="footer">
+
+    <div class="footer">
         <div class="footer-1">
             <div class="logo">
                 <img src="../../images/eatout logo.jpg" alt="">
@@ -158,5 +176,6 @@ session_start();
         </div>
     </div>
     <script src="../../frontend/user/app.js"></script>
-    </body>
+</body>
+
 </html>

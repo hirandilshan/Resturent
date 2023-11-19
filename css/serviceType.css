@@ -1,31 +1,31 @@
-*{
-    margin: 0; 
+* {
+    margin: 0;
     padding: 0;
 }
 
-.content{
+.content {
     background-color: rgb(219, 227, 253);
     padding: 0 7vw;
 }
 
-.intro{
+.intro {
     text-align: center;
-    width:100%;
-    margin: 0 auto;
-       
-}
-
-.intro .intro-image{
     width: 100%;
-    margin: 0px auto;        
+    margin: 0 auto;
+
 }
 
-.intro .intro-image img{
-    width:100%;
-    height: 400px; 
+.intro .intro-image {
+    width: 100%;
+    margin: 0px auto;
 }
 
-.intro .intro-image h1{
+.intro .intro-image img {
+    width: 100%;
+    height: 400px;
+}
+
+.intro .intro-image h1 {
     -webkit-text-stroke: 3px black;
     color: rgb(251, 252, 248);
     font-size: 60px;
@@ -40,7 +40,7 @@
 }
 
 
-.service-types{
+.service-types {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -51,12 +51,12 @@
     padding-bottom: 25px;
 }
 
-.service-type{
+.service-type {
     align-content: center;
     width: 80%;
     padding: 20px;
     padding-right: 30px;
-    
+
     display: flex;
     flex-wrap: wrap;
     background-color: rgb(123, 195, 243);
@@ -70,7 +70,7 @@
     border-radius: 10px;
 }
 
-div.service-type a.button{
+div.service-type a.button {
     margin-left: 10px;
     margin-top: 5px;
     padding: 10px 5px;
@@ -84,25 +84,27 @@ div.service-type a.button{
     height: 50px;
 
 }
-div.service-type a.button:hover{
+
+div.service-type a.button:hover {
     text-decoration: underline;
-    
+
 }
+
 div.service-type h3 {
     margin-top: 10px;
     font-size: 30px;
     padding-left: 10px;
 }
-  
+
 div.service-type p {
     margin-top: 5px;
     padding-left: 100px;
 }
 
 
-@media only screen and (max-width: 1284px){
-    .intro .intro-image h1{
+@media only screen and (max-width: 1284px) {
+    .intro .intro-image h1 {
         display: none;
-        
+
     }
-}   
+}
