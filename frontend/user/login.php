@@ -6,6 +6,7 @@ session_start();
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/login.css">
     <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -144,31 +145,34 @@ session_start();
             </div>
         </div>
     </header>
-    <div class="forms">
-            <div class="form-details">
-                <h2>Welcome to Signature Cuisine</h2>
-                <p>Please log in using your personal information to stay connected with us.</p>
-            </div>
-            <div class="form-content">
-
-                <form method="POST" action="../../backend/user/loginP.php">
-                    <div class="inputs">
-                        <input type="email" name="email" placeholder="E-mail" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="inputs">
-                        <input type="password" required name="password" placeholder="password" required>
-                        <label>Password</label>
-                    </div>
-                    <a href="#" class="forgot-pass">Forgot password?</a>
-                    <button type="submit">Log In</button>
-                </form>
-                <div class="link">
-                    Don't have an account?
-                    <a href="../../frontend/user/signup.php" id="signup-link">Signup</a>
+    <div class="content">
+        <div class="forms">
+                <div class="form-details">
+                    <h2>Welcome to EAT OUT</h2>
+                    <p>Please log in using your personal information to stay connected with us.</p>
                 </div>
-            </div>
-        </div>
+                <div class="form-content">
+
+                    <form method="POST" action="../../backend/user/loginP.php">
+                        <div class="inputs">
+                            <input type="email" name="email" placeholder="E-mail" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="password" required name="password" placeholder="password" required>
+                            <label>Password</label>
+                        </div>
+                        <a href="#" class="forgot-pass">Forgot password?</a>
+                        <button type="submit">Log In</button>
+                    </form>
+                    <div class="link">
+                        Don't have an account?
+                        <a href="../../frontend/user/signup.php" id="signup-link">Signup</a>
+                    </div>
+                </div>
+        </div>            
+    </div>
+    
 
 
 

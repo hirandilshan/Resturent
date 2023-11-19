@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
@@ -13,12 +14,13 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        
+
         <div class="header">
             <div class="headerbar">
-                <div class="account"> 
+                <div class="account">
                     <ul>
 
                         <?php
@@ -33,74 +35,79 @@ session_start();
                         <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
                             </a></li>
 
-                        
+
                         <a href="#">
                             <li>
                                 <i class="material-icons" id="search-icon1">&#xe8b6;</i>
                             </li>
                         </a>
                         <div class="search" id="searchinput1">
-                            <a href="../../frontend/user/searchpage.php">
-                            <input type="search" id="search-box" name="Search-box">
-                            </a>
-                            <i class="material-icons">&#xe8b6;</i>
+                        <form method="POST" action="../../frontend/user/searchP.php">
+                                <input type="search" id="search-box" name="Search-box">
+                            
+                            <button class="search_btn" type="submit" id="searchBtn">Search</button>
+
+
+                            
+                                
+                            </form>
                         </div>
                     </ul>
-                    
+
                 </div>
                 <div class="nav">
                     <ul>
                         <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li> 
+                            <li>Food Menu</li>
                         </a>
                         <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li> 
+                            <li>Service Types</li>
                         </a>
                         <a href="../../frontend/user/galary.php">
-                            <li>Galary</li> 
+                            <li>Galary</li>
                         </a>
                         <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li> 
+                            <li>Facilities</li>
                         </a>
                         <a href="../../frontend/user/offers.php">
-                            <li>Offers</li> 
+                            <li>Offers</li>
                         </a>
                         <a href="../../frontend/user/about.php">
-                            <li>About</li> 
+                            <li>About</li>
                         </a>
                         <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li> 
+                            <li>Reservation</li>
                         </a>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="logo">
-                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                        <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li> 
-                        </a>
-                        <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li> 
-                        </a>
-                        <a href="../../frontend/user/galary.php">
-                            <li>Galary</li> 
-                        </a>
-                        <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li> 
-                        </a>
-                        <a href="../../frontend/user/offers.php">
-                            <li>Offers</li> 
-                        </a>
-                        <a href="../../frontend/user/about.php">
-                            <li>About</li> 
-                        </a>
-                        <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li> 
-                        </a>
+                    <a href="../../frontend/user/foodMenu.php">
+                        <li>Food Menu</li>
+                    </a>
+                    <a href="../../frontend/user/serviceTypes.php">
+                        <li>Service Types</li>
+                    </a>
+                    <a href="../../frontend/user/galary.php">
+                        <li>Galary</li>
+                    </a>
+                    <a href="../../frontend/user/facilities.php">
+                        <li>Facilities</li>
+                    </a>
+                    <a href="../../frontend/user/offers.php">
+                        <li>Offers</li>
+                    </a>
+                    <a href="../../frontend/user/about.php">
+                        <li>About</li>
+                    </a>
+                    <a href="../../frontend/user/reservation.php">
+                        <li>Reservation</li>
+                    </a>
                 </ul>
             </div>
             <div class="bar">
@@ -117,14 +124,16 @@ session_start();
                     </a>
                 </ul>
             </div>
-            <div class="search-input">
-                <div>
-                    <a href="../../frontend/user/searchpage.php">
+            <form method="POST" action="../../frontend/user/searchP.php">
+                <div class="search-input">
+                    <div>
                         <input type="search" id="search-box" name="Search-box">
-                    </a>
+
+                        </a>
+                    </div>
+                    <button class="search_btn" type="submit" id="searchBtn">Search</button>
                 </div>
-                <button class="search_btn">Search</button>
-            </div>
+            </form>
             <div class="icon">
                 <ul>
 
@@ -140,16 +149,18 @@ session_start();
                     <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
                         </a></li>
 
-                </ul> 
+                </ul>
             </div>
         </div>
     </header>
-    <div class="home"> 
+    <div class="home">
         <div class="main_slide">
             <div>
                 <h1>Enjoy <span>Delicious Food</span> is Your Healthy Life.</h1>
-                <p>Signature cuisine Restaurant has been a local favorite for more than a decade, situated near the coastal lines of the western province of Sri Lanka. Savannah is known for its authentic Sri Lankan food, exotic Indian and Chinese cuisine and a blend of western and continental dishes.</p>
-                <button class="red_btn">Visit Now</button>
+                <p>EAT OUT Restaurant has been a local favorite for more than a decade, situated near the coastal lines of the western province of Sri Lanka. Savannah is known for its authentic Sri Lankan food, exotic Indian and Chinese cuisine and a blend of western and continental dishes.</p>
+                <form method='POST' action='../../frontend/user/facilities.php'>
+                    <button type="submit" class="red_btn">Visit Now</button>
+                </form>
             </div>
             <div>
                 <img src="../../images/burger.jpg" alt="friedrice">
@@ -161,8 +172,10 @@ session_start();
                     <img src="../../images/burger.jpg" alt="food item">
                 </div>
                 <h3>Burger</h3>
-                <p>chicken burgur with spicy chicken and potato chips                                                                           </p>
-                <button class="red_btn">See Menu</button>
+                <p>chicken burgur with spicy chicken and potato chips </p>
+                <form method='POST' action='../../frontend/user/foodMenu.php'>
+                    <button type="submit" class="red_btn">See Menu</button>
+                </form>
             </div>
             <div class="item">
                 <div>
@@ -170,7 +183,9 @@ session_start();
                 </div>
                 <h3>Cheese Koththu</h3>
                 <p>Using curd instead of cheese, this kottu has a tart kick that's also fatty and milky in a way that works with spices at play</p>
-                <button class="red_btn">See Menu</button>
+                <form method='POST' action='../../frontend/user/foodMenu.php'>
+                    <button type="submit" class="red_btn">See Menu</button>
+                </form>
             </div>
             <div class="item">
                 <div>
@@ -178,7 +193,9 @@ session_start();
                 </div>
                 <h3>Biriyani</h3>
                 <p>Biryani, flavourful rice dish of Persian origin that has become a popular celebratory dish in South Asia</p>
-                <button class="red_btn">See Menu</button>
+                <form method='POST' action='../../frontend/user/foodMenu.php'>
+                    <button type="submit" class="red_btn">See Menu</button>
+                </form>
             </div>
         </div>
         <div class="main_slide2">
@@ -274,7 +291,7 @@ session_start();
                         <p>Web Developer</p>
                     </div>
                 </div>
-                
+
             </div>
             <div class="chef">
                 <img src="../../images/chef.jpg" alt="chef">
@@ -284,14 +301,44 @@ session_start();
             <div class="letter-head">
                 <h2>Submit <span>Review</span></h2>
             </div>
-            <div class="letter-input">
-                <div>
-                    <input type="text" placeholder="Rate Us">
+            <form method="POST" action="../../backend/user/reviewP.php">
+                <div class="letter-input">
+
+                    <div>
+                        <input type="text" name="review" placeholder="Rate Us" required>
+                    </div>
+                    <button type="submit" class="red_btn">Submit</button>
+
                 </div>
-                <button class="red_btn">Submit</button>
-            </div>
+            </form>
         </div>
-        
+
+        <div class="reviews">
+            <?php
+            include_once '../../backend/user/dbs.php';  // Include your database connection file
+            $sql = "SELECT review,userName FROM review;";
+
+            $result = mysqli_query($connect, $sql);
+
+            while ($row = $result->fetch_assoc()) {
+                // Access the data by column name
+                $column1Value = $row["review"];
+                $column2Value = $row["userName"];
+
+                // Do something with the data
+                echo "<p>Review: $column1Value<br> user: $column2Value<br></p>";
+            }
+
+
+            $connect->close();
+
+            ?>
+
+        </div>
+
+
+
+
     </div>
     <div class="footer">
         <div class="footer-1">
@@ -314,4 +361,5 @@ session_start();
     <script src="../../frontend/user/app.js"></script>
     <script src="../../frontend/user/search.js"></script>
 </body>
+
 </html>

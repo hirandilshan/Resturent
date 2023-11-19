@@ -3,9 +3,11 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/signup.css">
     <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +15,13 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        
+
         <div class="header">
             <div class="headerbar">
-                <div class="account"> 
+                <div class="account">
                     <ul>
 
                         <?php
@@ -33,7 +36,7 @@ session_start();
                         <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
                             </a></li>
 
-                        
+
                         <a href="#">
                             <li>
                                 <i class="material-icons" id="search-icon1">&#xe8b6;</i>
@@ -41,66 +44,66 @@ session_start();
                         </a>
                         <div class="search" id="searchinput1">
                             <a href="../../frontend/user/searchpage.php">
-                            <input type="search" id="search-box" name="Search-box">
+                                <input type="search" id="search-box" name="Search-box">
                             </a>
                             <i class="material-icons">&#xe8b6;</i>
                         </div>
                     </ul>
-                    
+
                 </div>
                 <div class="nav">
                     <ul>
                         <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li> 
+                            <li>Food Menu</li>
                         </a>
                         <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li> 
+                            <li>Service Types</li>
                         </a>
                         <a href="../../frontend/user/galary.php">
-                            <li>Galary</li> 
+                            <li>Galary</li>
                         </a>
                         <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li> 
+                            <li>Facilities</li>
                         </a>
                         <a href="../../frontend/user/offers.php">
-                            <li>Offers</li> 
+                            <li>Offers</li>
                         </a>
                         <a href="../../frontend/user/about.php">
-                            <li>About</li> 
+                            <li>About</li>
                         </a>
                         <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li> 
+                            <li>Reservation</li>
                         </a>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="logo">
-                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                        <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li> 
-                        </a>
-                        <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li> 
-                        </a>
-                        <a href="../../frontend/user/galary.php">
-                            <li>Galary</li> 
-                        </a>
-                        <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li> 
-                        </a>
-                        <a href="../../frontend/user/offers.php">
-                            <li>Offers</li> 
-                        </a>
-                        <a href="../../frontend/user/about.php">
-                            <li>About</li> 
-                        </a>
-                        <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li> 
-                        </a>
+                    <a href="../../frontend/user/foodMenu.php">
+                        <li>Food Menu</li>
+                    </a>
+                    <a href="../../frontend/user/serviceTypes.php">
+                        <li>Service Types</li>
+                    </a>
+                    <a href="../../frontend/user/galary.php">
+                        <li>Galary</li>
+                    </a>
+                    <a href="../../frontend/user/facilities.php">
+                        <li>Facilities</li>
+                    </a>
+                    <a href="../../frontend/user/offers.php">
+                        <li>Offers</li>
+                    </a>
+                    <a href="../../frontend/user/about.php">
+                        <li>About</li>
+                    </a>
+                    <a href="../../frontend/user/reservation.php">
+                        <li>Reservation</li>
+                    </a>
                 </ul>
             </div>
             <div class="bar">
@@ -140,11 +143,12 @@ session_start();
                     <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
                         </a></li>
 
-                </ul> 
+                </ul>
             </div>
         </div>
     </header>
-    <div class="forms">
+    <div class="content">
+        <div class="forms">
 
             <div class="form-details">
                 <h2>Create Account</h2>
@@ -177,9 +181,12 @@ session_start();
                     <a href="../../frontend/user/login.php" id="login-link">Login</a>
                 </div>
             </div>
+        </div>
+    </div>
 
 
-            <div class="footer">
+
+    <div class="footer">
         <div class="footer-1">
             <div class="logo">
                 <img src="../../images/eatout logo.jpg" alt="">
@@ -200,4 +207,5 @@ session_start();
     <script src="../../frontend/user/app.js"></script>
     <script src="../../frontend/user/search.js"></script>
 </body>
+
 </html>

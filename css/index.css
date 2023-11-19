@@ -1,6 +1,21 @@
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
 .home{
     background-color: rgb(219, 227, 253);
     padding: 0 7vw;
+    flex: 1;
 }
 
 .main_slide{
@@ -338,6 +353,24 @@
     font-size: 18px;
     box-shadow: none;
     border-radius: 0 10px 10px 0;
+}
+
+.reviews {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.reviews p {
+    
+    background-color: rgb(123, 195, 243);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 18px;    
+    font-weight: bold;
+    color: #f0f0f0;
+
 }
 
 

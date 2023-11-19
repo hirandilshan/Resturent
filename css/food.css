@@ -79,11 +79,10 @@ body {
 
 
 
-
-div.choice {
+.choice {
     text-align: center;
     width: 80%; 
-    margin: 25px auto;
+    margin: 50px auto;
     padding: 10px;
     padding-left: 250px;
 }
@@ -96,17 +95,17 @@ div.choice {
     padding-bottom: 20px;
     text-align: center;
 }
-div.choice div.foods {
+.choice .foods {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-div.foods div.food-item {
+.foods .food-item {
     width: 250px; 
     margin: 10px;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(78, 78, 78);
     padding: 10px;
     box-sizing: border-box;
 }
@@ -130,7 +129,7 @@ div.foods div.food-item {
 }
 
   
-button {
+.food-item button{
     padding: 5px 10px;
     background-color: #300a0a;
     color: white;
@@ -138,6 +137,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.food-item button:hover {
     background-color: #70591a;
 }

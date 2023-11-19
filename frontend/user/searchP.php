@@ -3,10 +3,11 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
-    <link rel="stylesheet" href="../../css/foodMenu.css">
+    <link rel="stylesheet" href="../../css/food.css">
     <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +15,13 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        
+
         <div class="header">
             <div class="headerbar">
-                <div class="account"> 
+                <div class="account">
                     <ul>
 
                         <?php
@@ -34,7 +36,7 @@ session_start();
                         <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
                             </a></li>
 
-                        
+
                         <a href="#">
                             <li>
                                 <i class="material-icons" id="search-icon1">&#xe8b6;</i>
@@ -42,66 +44,66 @@ session_start();
                         </a>
                         <div class="search" id="searchinput1">
                             <a href="../../frontend/user/searchpage.php">
-                            <input type="search" id="search-box" name="Search-box">
+                                <input type="search" id="search-box" name="Search-box">
                             </a>
                             <i class="material-icons">&#xe8b6;</i>
                         </div>
                     </ul>
-                    
+
                 </div>
                 <div class="nav">
                     <ul>
                         <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li> 
+                            <li>Food Menu</li>
                         </a>
                         <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li> 
+                            <li>Service Types</li>
                         </a>
                         <a href="../../frontend/user/galary.php">
-                            <li>Galary</li> 
+                            <li>Galary</li>
                         </a>
                         <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li> 
+                            <li>Facilities</li>
                         </a>
                         <a href="../../frontend/user/offers.php">
-                            <li>Offers</li> 
+                            <li>Offers</li>
                         </a>
                         <a href="../../frontend/user/about.php">
-                            <li>About</li> 
+                            <li>About</li>
                         </a>
                         <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li> 
+                            <li>Reservation</li>
                         </a>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="logo">
-                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                        <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li> 
-                        </a>
-                        <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li> 
-                        </a>
-                        <a href="../../frontend/user/galary.php">
-                            <li>Galary</li> 
-                        </a>
-                        <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li> 
-                        </a>
-                        <a href="../../frontend/user/offers.php">
-                            <li>Offers</li> 
-                        </a>
-                        <a href="../../frontend/user/about.php">
-                            <li>About</li> 
-                        </a>
-                        <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li> 
-                        </a>
+                    <a href="../../frontend/user/foodMenu.php">
+                        <li>Food Menu</li>
+                    </a>
+                    <a href="../../frontend/user/serviceTypes.php">
+                        <li>Service Types</li>
+                    </a>
+                    <a href="../../frontend/user/galary.php">
+                        <li>Galary</li>
+                    </a>
+                    <a href="../../frontend/user/facilities.php">
+                        <li>Facilities</li>
+                    </a>
+                    <a href="../../frontend/user/offers.php">
+                        <li>Offers</li>
+                    </a>
+                    <a href="../../frontend/user/about.php">
+                        <li>About</li>
+                    </a>
+                    <a href="../../frontend/user/reservation.php">
+                        <li>Reservation</li>
+                    </a>
                 </ul>
             </div>
             <div class="bar">
@@ -141,95 +143,74 @@ session_start();
                     <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
                         </a></li>
 
-                </ul> 
+                </ul>
             </div>
         </div>
     </header>
-    <div class="intro">
-            <div class="intro-image">
-                <img src="../../img/menu.jpg" alt="menu">
-                <h1>Our Menu</h1>
-            </div><!--intro Img-->
-        </div><!--Introduction-->
 
-        <div class="menu">
-            <div class="section">
-                <h2>Burgers</h2>
-                <a href="burgers.php">
-                    <img src="../../img/buger.jpeg" alt="Burger">
-                </a>
+    <div id="results">
+        <ul id="matching-items"></ul>
+    </div>
+    <div class="choice">
 
-            </div><!--Section-->
 
-            <div class="section">
-                <h2>Nuggets</h2>
-                <a href="nuggets.php">
-                    <img src="../../img/nugget.jpeg" alt="Nuggets">
-                </a>
+        <div class="foods">
+            <?php
 
-            </div><!--Section-->
+            include_once '../../backend/user/dbs.php';  // Include your database connection file
+            $sql = "SELECT * FROM foods";
+            $result = mysqli_query($connect, $sql);
 
-            <div class="section">
-                <h2>Salads</h2>
-                <a href="salads.php">
-                    <img src="../../img/salads.jpeg" alt="Salads">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Fries</h2>
-                <a href="fries.php">
-                    <img src="../../img/fries.jpeg" alt="Fries">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Muffins</h2>
-                <a href="muffins.php">
-                    <img src="../../img/muffin.jpeg" alt="Muffins">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Biscuits</h2>
-                <a href="biscutes.php">
-                    <img src="../../img/biskcuit.jpeg" alt="Biscuits">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Frosty</h2>
-                <a href="ice.php">
-                    <img src="../../img/ices.jpeg" alt="Ice creams">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Drinks</h2>
-                <a href="beverage.php">
-                    <img src="../../img/bev.jpeg" alt="Beverages">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Coffee</h2>
-                <a href="coffee.php">
-                    <img src="../../img/coffee1.jpeg" alt="Coffee">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Pizza</h2>
-                <a href="pizza.php">
-                    <img src="../../img/pizza.jpeg" alt="Pizza">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Sides & more</h2>
-                <a href="sides.php">
-                    <img src="../../img/sides.jpeg" alt="Sides & more">
-                </a>
-            </div><!--Section-->
-            <div class="section">
-                <h2>Meal Deals</h2>
-                <a href="deals.php">
-                    <img src="../../img/mealDeals.jpeg" alt="Meal Deals">
-                </a>
-            </div><!--Section-->
-        </div>
+
+
+            while ($row = $result->fetch_assoc()) {
+                // Access the data by column name
+
+                $foodId = $row["foodId"];
+                $item = $row["item"];
+                $img = $row["img"];
+                $price = $row["price"];
+
+                echo '<div class="food-item">';
+                echo "<img src='$img' alt='Food 1'>";
+                echo "<h3> $item</h3>";
+                echo "<h4>Rs $price</h4>";
+                echo '<button>Add to Cart</button>';
+                echo '</div>';
+            }
+
+
+            $connect->close();
+
+            ?>
+        </div><!--foods-->
+        <script>
+            function searchItems(searchQuery) {
+                const lowerCaseSearchQuery = searchQuery.toLowerCase();
+                const foodItems = document.querySelectorAll('.food-item');
+
+                foodItems.forEach(item => {
+                    const itemName = item.querySelector('h3').innerText.toLowerCase();
+                    const itemDiv = item;
+
+                    // Check if the item matches the search query
+                    if (itemName.includes(lowerCaseSearchQuery)) {
+                        itemDiv.style.display = 'block'; // Show the item
+                    } else {
+                        itemDiv.style.display = 'none'; // Hide the item
+                    }
+                });
+            }
+
+            // Assuming $Search is a PHP variable holding the search query
+            searchItems('<?php echo $Search = $_POST['Search-box']; ?>');
+        </script>
+
+    </div>
+
+    </div><!--wrapper-->
+    <script src="../../frontend/user/search.js"></script>
+    <script src="../../frontend/user/searchPage.js"></script>
 
 
 
@@ -257,4 +238,5 @@ session_start();
     <script src="../../frontend/user/app.js"></script>
     <script src="../../frontend/user/search.js"></script>
 </body>
+
 </html>

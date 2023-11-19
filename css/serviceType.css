@@ -27,7 +27,7 @@
 
 .intro .intro-image h1{
     -webkit-text-stroke: 3px black;
-    color: rgb(230, 233, 222);
+    color: rgb(251, 252, 248);
     font-size: 60px;
     font-weight: bolder;
     text-align: center;
@@ -40,7 +40,7 @@
 }
 
 
-.facilities{
+.service-types{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -51,7 +51,7 @@
     padding-bottom: 25px;
 }
 
-.facility {
+.service-type{
     align-content: center;
     width: 80%;
     padding: 20px;
@@ -59,15 +59,44 @@
     
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(123, 195, 243);;
+    background-color: rgb(123, 195, 243);
     border-radius: 45px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.facility img {
+.service-type img {
     width: 95px;
     height: 95px;
     border-radius: 10px;
+}
+
+div.service-type a.button{
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 10px 5px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(8, 75, 119);
+    background-color: rgb(219, 227, 253);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 50px;
+
+}
+div.service-type a.button:hover{
+    text-decoration: underline;
+    
+}
+div.service-type h3 {
+    margin-top: 10px;
+    font-size: 30px;
+    padding-left: 10px;
+}
+  
+div.service-type p {
+    margin-top: 5px;
+    padding-left: 100px;
 }
 
 
