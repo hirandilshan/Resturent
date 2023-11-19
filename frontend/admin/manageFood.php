@@ -6,6 +6,7 @@ session_start();
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/manageFood.css">
     <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,7 +97,21 @@ session_start();
             </div>
         </div>
     </header>
-        <?php
+    <div class="content">
+    <div class="intro">
+            <div class="intro-topic">
+                <h1>Manage Foods</h1>
+            </div><!--intro Img-->
+            
+    </div>
+    <div class="addFood">
+        <form method='POST' action='../../frontend/admin/addFood.php'>
+            <button class="add" type='submit' name='add'>
+                <h1>Add New Food</h1>
+            </button>
+        </form>
+    </div>
+    <?php
             include_once '../../backend/user/dbs.php';  // Include your database connection file
             $sql = "SELECT * FROM foods;";
             $result = mysqli_query($connect, $sql);
@@ -142,9 +157,10 @@ session_start();
 
         ?>
 
-        <form method='POST' action='../../frontend/admin/addFood.php'>
-        <button type='submit' name='add'><h1>Add New Food</h1></button>
-        </form>
+        
+
+    </div>
+        
         <div class="footer">
         <div class="footer-1">
             <div class="logo">
