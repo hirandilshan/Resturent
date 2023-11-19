@@ -8,6 +8,7 @@ session_start();
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
     <link rel="stylesheet" href="../../css/food.css">
+    <link rel="stylesheet" href="../../css/searchPage.css">
     <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,10 +44,15 @@ session_start();
                             </li>
                         </a>
                         <div class="search" id="searchinput1">
-                            <a href="../../frontend/user/searchpage.php">
+                            <form method="POST" action="../../frontend/user/searchP.php">
                                 <input type="search" id="search-box" name="Search-box">
-                            </a>
-                            <i class="material-icons">&#xe8b6;</i>
+
+                                <button class="search_btn" type="submit" id="searchBtn">Search</button>
+
+
+
+
+                            </form>
                         </div>
                     </ul>
 
@@ -120,14 +126,16 @@ session_start();
                     </a>
                 </ul>
             </div>
-            <div class="search-input">
-                <div>
-                    <a href="../../frontend/user/searchpage.php">
+            <form method="POST" action="../../frontend/user/searchP.php">
+                <div class="search-input">
+                    <div>
                         <input type="search" id="search-box" name="Search-box">
-                    </a>
+
+                        </a>
+                    </div>
+                    <button class="search_btn" type="submit" id="searchBtn">Search</button>
                 </div>
-                <button class="search_btn">Search</button>
-            </div>
+            </form>
             <div class="icon">
                 <ul>
 

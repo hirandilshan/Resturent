@@ -100,3 +100,9 @@ div.service-type p {
 }
 
 
+@media only screen and (max-width: 1284px){
+    .intro .intro-image h1{
+        display: none;
+        
+    }
+}   

@@ -216,6 +216,11 @@
         color: rgb(245, 101, 34);
     }
 
+    .intro .intro-image h1{
+        display: none;
+        
+    }
+
     .header .headerbar .account,.header .headerbar .nav{
         display:block;
         font-size: 18px;

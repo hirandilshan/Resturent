@@ -16,10 +16,10 @@ session_start();
 </head>
 <body>
     <header>
-        
+
         <div class="header">
             <div class="headerbar">
-                <div class="account"> 
+                <div class="account">
                     <ul>
 
                         <?php
@@ -34,74 +34,79 @@ session_start();
                         <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
                             </a></li>
 
-                        
+
                         <a href="#">
                             <li>
                                 <i class="material-icons" id="search-icon1">&#xe8b6;</i>
                             </li>
                         </a>
                         <div class="search" id="searchinput1">
-                            <a href="../../frontend/user/searchpage.php">
-                            <input type="search" id="search-box" name="Search-box">
-                            </a>
-                            <i class="material-icons">&#xe8b6;</i>
+                        <form method="POST" action="../../frontend/user/searchP.php">
+                                <input type="search" id="search-box" name="Search-box">
+                            
+                            <button class="search_btn" type="submit" id="searchBtn">Search</button>
+
+
+                            
+                                
+                            </form>
                         </div>
                     </ul>
-                    
+
                 </div>
                 <div class="nav">
                     <ul>
                         <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li> 
+                            <li>Food Menu</li>
                         </a>
                         <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li> 
+                            <li>Service Types</li>
                         </a>
                         <a href="../../frontend/user/galary.php">
-                            <li>Galary</li> 
+                            <li>Galary</li>
                         </a>
                         <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li> 
+                            <li>Facilities</li>
                         </a>
                         <a href="../../frontend/user/offers.php">
-                            <li>Offers</li> 
+                            <li>Offers</li>
                         </a>
                         <a href="../../frontend/user/about.php">
-                            <li>About</li> 
+                            <li>About</li>
                         </a>
                         <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li> 
+                            <li>Reservation</li>
                         </a>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="logo">
-                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="",height="100", width="50"></a>
+                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                        <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li> 
-                        </a>
-                        <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li> 
-                        </a>
-                        <a href="../../frontend/user/galary.php">
-                            <li>Galary</li> 
-                        </a>
-                        <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li> 
-                        </a>
-                        <a href="../../frontend/user/offers.php">
-                            <li>Offers</li> 
-                        </a>
-                        <a href="../../frontend/user/about.php">
-                            <li>About</li> 
-                        </a>
-                        <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li> 
-                        </a>
+                    <a href="../../frontend/user/foodMenu.php">
+                        <li>Food Menu</li>
+                    </a>
+                    <a href="../../frontend/user/serviceTypes.php">
+                        <li>Service Types</li>
+                    </a>
+                    <a href="../../frontend/user/galary.php">
+                        <li>Galary</li>
+                    </a>
+                    <a href="../../frontend/user/facilities.php">
+                        <li>Facilities</li>
+                    </a>
+                    <a href="../../frontend/user/offers.php">
+                        <li>Offers</li>
+                    </a>
+                    <a href="../../frontend/user/about.php">
+                        <li>About</li>
+                    </a>
+                    <a href="../../frontend/user/reservation.php">
+                        <li>Reservation</li>
+                    </a>
                 </ul>
             </div>
             <div class="bar">
@@ -118,14 +123,16 @@ session_start();
                     </a>
                 </ul>
             </div>
-            <div class="search-input">
-                <div>
-                    <a href="../../frontend/user/searchpage.php">
+            <form method="POST" action="../../frontend/user/searchP.php">
+                <div class="search-input">
+                    <div>
                         <input type="search" id="search-box" name="Search-box">
-                    </a>
+
+                        </a>
+                    </div>
+                    <button class="search_btn" type="submit" id="searchBtn">Search</button>
                 </div>
-                <button class="search_btn">Search</button>
-            </div>
+            </form>
             <div class="icon">
                 <ul>
 
@@ -141,7 +148,7 @@ session_start();
                     <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
                         </a></li>
 
-                </ul> 
+                </ul>
             </div>
         </div>
     </header>
