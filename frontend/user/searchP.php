@@ -183,7 +183,12 @@ session_start();
                 echo "<img src='$img' alt='Food 1'>";
                 echo "<h3> $item</h3>";
                 echo "<h4>Rs $price</h4>";
-                echo '<button>Add to Cart</button>';
+                echo "<form method='POST' action='../../backend/user/cartP.php'>";
+                echo "<input type='hidden' name='foodId' value='$foodId'>";
+                echo "<input type='hidden' name='item' value='$item'>";
+                echo "<input type='hidden' name='price' value='$price'>";
+                echo "<button type='submit' name='addToCart'>Add to Cart</button>";
+                echo "</form>";
                 echo '</div>';
             }
 
