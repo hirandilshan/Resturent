@@ -2,7 +2,7 @@
 
 //session_start();
 
-$dbServerName = "localhost";
+$dbServerName = "localhost:3307";
 $dbUserName = "root";
 $dbPassword = "";
 $dbName = "resturent";
